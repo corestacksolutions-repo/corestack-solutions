@@ -15,8 +15,8 @@ export default function Question({id, Q, A, handleExpansion, isExpanded}){
                                      className=
                                         {`${id===isExpanded 
                                           ? 
-                                          'text-yellow-600' 
-                                          : ''
+                                          'text-yellow-600 bg-gray-200' 
+                                          : 'text-black/70'
                                          } 
                                           transition-all 
                                           text-[14px]
@@ -29,7 +29,8 @@ export default function Question({id, Q, A, handleExpansion, isExpanded}){
                                         my-4 
                                         items-center  
                                         border 
-                                        border-blue-600/5 
+                                        border-blue-600/5
+                                        shadow 
                                         rounded-3xl sm 
                                         
                                         
@@ -37,7 +38,7 @@ export default function Question({id, Q, A, handleExpansion, isExpanded}){
                                         p-3
                                         `}>
                                     <div className={`${id===isExpanded ? 'h-65 md:h-40 lg:h-30 ' : 'h-14 lg:h-8'} w-full tracking-wide  transition-all duration-500 overflow-hidden space-y-4`}>
-                                            <h3 className={` text-[1.2rem] text-black/70`}>
+                                            <h3 className={` text-[1.2rem] `}>
                                              {Q}
                                              </h3>
                                             <p className={

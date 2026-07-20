@@ -14,7 +14,7 @@ export default function FAQ(){
                 const toggleExpansion =(id)=>{
                       
                      setIsExpanded(isExpanded===id ? null : id)
-                    console.log(id)
+                    
                 }
 
                 
