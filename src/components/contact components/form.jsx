@@ -21,12 +21,13 @@ const ContactForm = () =>{
                             <input 
                                type="text"
                                name="name" 
+                               
                                className="
                                    w-1/2
                                    pb-4 
                                    outline-none 
                                     
-                                   border-b 
+                                   borde r-b 
                                    border-[#393E46]/20
                                    text-[15px]
                                    "

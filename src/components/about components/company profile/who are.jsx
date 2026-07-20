@@ -14,7 +14,7 @@ const AboutUs = () =>{
                   bg-[#f8fafc] 
                   bg- gray-100
                    
-            ">
+               ">
                <div 
                   className="
                      max-w-[1180px]
@@ -46,7 +46,7 @@ const AboutUs = () =>{
                     ">
                      About CoreStack
                   </h1>
-                  <p className="text-black uppercase text-[16px]">
+                  <p className="text-yellow-600 md:text-black uppercase text-[16px]">
                     Creating Digital Tools That Support Organizations' Operations.
                   </p>
                   <p 

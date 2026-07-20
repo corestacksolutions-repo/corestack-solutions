@@ -309,7 +309,7 @@ const Navbar = () => {
                         px-8
                         py-2 
                         font-semibold
-                        rounded-md 
+                        rounded-full
                         bg-[#03045e]
                         text-white
                         shadow-sm

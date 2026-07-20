@@ -53,7 +53,7 @@ const WhyUs = () =>{
                               
                            ">
                            <h2 className="">
-                               <b className="mr-4 font-normal">01</b> Business-First Approach
+                               <b className="text-yellow-600 md:text-black mr-4 font-normal">01</b> Business-First Approach
                            </h2>
                            <p className="font-light">
                                 We start with your business, not the technology. By understanding your 
@@ -75,9 +75,8 @@ const WhyUs = () =>{
                               tracking-wide
                               leading-relaxed
                            ">
-                           <h2 className="">
-                                 
-                               <b className="mr-4 font-normal">02</b>  Tailored Solutions
+                           <h2 className="">  
+                               <b className="text-yellow-600 md:text-black mr-4 font-normal">02</b>  Tailored Solutions
                            </h2>
                            <p className="font-light">
                               
@@ -86,28 +85,6 @@ const WhyUs = () =>{
                               operations.
                            </p>     
                         </article>
-
-                      { /* <article 
-                           className="
-                              hidden
-                              w-full
-                              text-lg
-                              space-y-6
-                              border
-                              border-black/10 
-                              
-                              p-4
-                           ">
-                           <h2 className="font-bold">
-                              Solving Real Business Challenges
-                           </h2>
-                           <p className="">
-                              Every solution is developed with a clear business objective. 
-                              Our focus is on addressing operational challenges, improving 
-                              efficiency, and delivering value.
-                           </p>
-                        </article>
-                        */}
                         <article 
                            className="
                               w-full
@@ -122,7 +99,7 @@ const WhyUs = () =>{
                               leading-relaxed
                            ">
                            <h2 className="">
-                              <b className="mr-4 font-normal">03</b> Long-Term Partnership
+                              <b className="text-yellow-600 md:text-black mr-4 font-normal">03</b> Long-Term Partnership
                            </h2>
                            <p className="font-light">
                               After delivery, we continue supporting our clients as their businesses evolve.

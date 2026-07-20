@@ -6,7 +6,7 @@ import { FaHandshake } from "react-icons/fa6";
 import { GiBulb, GiTargeted } from "react-icons/gi";
 import { IoBulb, IoBulbSharp, IoSparkles } from "react-icons/io5";
 import { LiaLightbulb, LiaLightbulbSolid } from "react-icons/lia";
-import { LuRocket, LuUsers } from "react-icons/lu";
+import { LuLayers3, LuRocket, LuTrophy, LuUsers } from "react-icons/lu";
 import { MdRocket } from "react-icons/md";
 import { SiSimpleicons, SiSimplex } from "react-icons/si";
 import { TbBulb, TbTargetArrow } from "react-icons/tb";
@@ -128,9 +128,9 @@ const OurDirection = () =>{
                             space-y-3
                         "
                         >
-                        <header className="flex flex-col lg:flex-row lg:items-center gap-3 text-[18px]">
-                            <span className="w-fit rounded bg -[#03045e] text- white">
-                                <BsLayers size={20}/>
+                        <header className="flex items-center gap-3 text-[18px]">
+                            <span className="w-fit rounded">
+                                <LuLayers3 size={20}/>
                             </span>
                             <h1 className="font-semibold">
                             Simplicity
@@ -153,9 +153,9 @@ const OurDirection = () =>{
                             h-full
                             space-y-3
                         ">
-                        <header className="flex flex-col lg:flex-row lg:items-center gap-3 text-[18px]">
+                        <header className="flex items-center gap-3 text-[18px]">
                             <span className="w-fit  ">
-                                <BsTrophy size={20}/>
+                                <LuTrophy size={20}/>
                             </span>
                             <h1 className="font-semibold">
                             Excellence
@@ -168,8 +168,8 @@ const OurDirection = () =>{
                         </p>
                         </article>
 
-                            <article 
-                        className="
+                        <article 
+                          className="
                             relative
                             overflow-hidden
                             p-3
@@ -180,7 +180,7 @@ const OurDirection = () =>{
                             h-full
                             space-y-3
                         ">
-                        <header className="flex flex-col lg:flex-row lg:items-center gap-3 text-[18px]">
+                        <header className="flex items-center gap-3 text-[18px]">
                             <span className="">
                                 <LuRocket size={20}/>
                             </span>
@@ -208,7 +208,7 @@ const OurDirection = () =>{
                             space-y-3
 
                         ">
-                        <header className="flex flex-col lg:flex-row lg:items-center gap-3 text-[18px]">
+                        <header className="flex items-center gap-3 text-[18px]">
                             <span className="w-fit ">
                                 <LuUsers size={20}/>
                             </span>

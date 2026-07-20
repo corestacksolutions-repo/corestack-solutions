@@ -19,9 +19,9 @@ const ProcessCard = ({id, icon, title, description, reverse=false}) =>{
                       `}
                   >
                   
-                    <div  className={`flex ${ reverse ? 'pl-12' : 'justify-end pr-12'} w-full`}>
+                    <div  className={`flex ${ reverse ? 'md:pl-12' : 'justify-end md:pr-12'} w-full`}>
                         <div id="neuro-in" className={`flex text-[4rem] font-extrabold text-yellow-600 mx-a uto ${ reverse ? 'roundel' : 'roundedfull'}   h-full w-1/2   p-4`}>
-                           <span className="m-auto">
+                           <span className=" m-auto">
                               0{id}
                            </span>
                         </div>
@@ -29,10 +29,10 @@ const ProcessCard = ({id, icon, title, description, reverse=false}) =>{
                     </div>
                   
                   <div className={`space-y-8 ${ !reverse ? 'rounded--2xl' : 'rounded-2'} p-4 `}>
-                    <div className="w-fit p-4 border rounded-full border-black/20">
-                       <Icon className="text-black/50 size-10"/>
+                    <div className="hidden md:block w-fit p-4 border rounded-full border-black/20">
+                       <Icon className=" text-black/50 size-10"/>
                     </div>
-                    <h3 className="text-xl text-yellow-600 font-semibold">
+                    <h3 className="text-[1.5rem] text-yellow-600 font-semibold">
                           {title}
                     </h3>  
                     <p className="text-lg  text-bla ck/80">
