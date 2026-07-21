@@ -102,28 +102,35 @@ const Footer = ()=> {
                     className="
                       hover:text-[#03045e]
                   ">
-                 Our Services
+                   Services
                 </Link>
                 <Link 
-                    to="/" 
+                    to="/approach" 
                     className="
                       hover:text-[#03045e]
                   "> 
-                  Our Solutions
+                  Approach
+                </Link>
+                <Link 
+                    to="/products" 
+                    className="
+                      hover:text-[#03045e]
+                  "> 
+                  Products
+                </Link>
+                <Link 
+                    to="/about" 
+                    className="
+                       hover:text-[#03045e]
+                    ">
+                  About
                 </Link>
                 <Link 
                     to="/contact" 
                     className="
                        hover:text-[#03045e]
                     ">
-                  About Us
-                </Link>
-                <Link 
-                    to="/contact" 
-                    className="
-                       hover:text-[#03045e]
-                    ">
-                     Contact Us
+                     Contact
                 </Link>
             </ul>
           </div>
@@ -182,7 +189,7 @@ const Footer = ()=> {
                 </p>
             </span>
 
-            <div className="flex gap-6 text-sm text-gray-500">
+            <div className=" hidden flex gap-6 text-sm text-gray-500">
               <a href="/privacy-policy" className="hover:text-[#03045e]">
                 Privacy Policy
               </a>

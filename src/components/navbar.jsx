@@ -245,7 +245,7 @@ const Navbar = () => {
                      </NavLink>
 
                      <NavLink
-                     to="/projects"
+                     to="/products"
                      className={({ isActive }) => `
                          relative
                          ${isActive 
@@ -321,7 +321,7 @@ const Navbar = () => {
                      Lets talk
                 </NavLink>
                </ul>
-               {/*CTA */}
+              
                
              
             </nav>
@@ -355,7 +355,7 @@ const Navbar = () => {
                   md:hidden 
                   w-full 
                   h-full 
-                  bg-white/95
+                  bg-white
                   pb-10 pt-5
                   px-2
                   `}
@@ -370,8 +370,7 @@ const Navbar = () => {
                   flex 
                   flex-col
                   items-center 
-                  text-[1.3em] 
-                  font-semibold 
+                  
                   gap-15 
                   z-100
                   "
@@ -388,13 +387,13 @@ const Navbar = () => {
                     to="/solutions"
                     onClick={toggleMenu}
                     className="">
-                        Our services
+                        Services
                  </NavLink>
                  <NavLink 
-                    to="/contact"
+                    to="/approach"
                     onClick={toggleMenu}
                     className="">
-                         Our approach
+                         Approach
                   </NavLink>
                   <NavLink 
                     to="/about"
@@ -406,7 +405,7 @@ const Navbar = () => {
                     to="/about"
                     onClick={toggleMenu}
                     className="">
-                        About us
+                        About
                  </NavLink>
               </ul>
                {/*user guide */}
@@ -438,7 +437,7 @@ const Navbar = () => {
                    <HiChevronDown className="size-4 mx-auto text-black/40 -rotate-90"/>
                 </button>
 
-                <Link to='/'
+                <Link to='/contact'
                     className="
                      flex
                      items-center

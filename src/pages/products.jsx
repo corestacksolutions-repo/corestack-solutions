@@ -1,6 +1,6 @@
 
 
-const Projects = () =>{
+const Products = () =>{
        return(
               <section 
                   className="
@@ -23,4 +23,4 @@ const Projects = () =>{
        )
 }
 
-export default Projects;
+export default Products;
