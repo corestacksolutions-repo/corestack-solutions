@@ -5,7 +5,7 @@ import ServicesCard from "./services card";
 import { Link } from "react-router-dom";
 const Services = () => {
         return(
-               <section id="our-services" className="w-full px-5 md:px-15 py-10 bg -gray-100/50">
+               <section id="our-services" className="w-full px-5 md:px-15 py-10 bg-gray-100/50">
                      <header className="mt-12 w-fit mx-auto text-center space-y-6">
                           
                           <h1 className="text-3xl md:text-5xl font-bold my-3">
