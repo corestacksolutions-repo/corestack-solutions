@@ -19,7 +19,7 @@ export default [
                 role:'Front-End Engineer | Co-Founder | Finance',
                 description:` 
                        Leads the design and 
-                       development of use interfaces while contributing
+                       development of user interfaces while contributing
                        to the financial planning and business growth. His 
                        work focuses on creating digital experiences that are
                        clear, practical, and aligned with business objectives. 
