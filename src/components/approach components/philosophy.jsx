@@ -12,9 +12,10 @@ const Philosophy = () =>{
         return(
                <section className=" bg-[#f8fafc] px-6 py-16">
                   <header className="w-full max-w-3xl mx-auto text-center mt-16">
-                     <h1 className="text-[2.5rem] font-bold">
+                     
+                     <h2 className="text-[2.5rem] font-bold">
                           Principles That Guide Our Work
-                     </h1>
+                     </h2>
                      <div className="h-[3px] w-1/10 bg-yellow-600 mx-auto my-6"/>
 
                      <p className="text-[1.3rem] font-light">

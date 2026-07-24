@@ -7,21 +7,20 @@ const Process = () => {
   return (
     <section id="how-we-work" className="w-full px-5 md:px-15 py-20 bg-gray-100/50">
       {/* Header */}
-      <header className="max-w-4xl mx-auto text-center space-y-6 space-y-12">
-        {/* <span className="text-primary font-semibold tracking-wide uppercase">
+      <header className="max-w-4xl mx-auto text-center space-y-6 space-y-12"> 
+        <h1 className="text-primary font-semibold tracking-wide my-8 uppercase">
           How We Work
-        </span> */}
+        </h1>
 
         <h2 className="text-3xl md:text-4xl font-bold">
           Working Together in Every Step
         </h2>
 
         <p className="text-[1.3rem] font-light leading-relaxed">
-          Every business is different, and so is every solution. That's why we
-          don't believe in one-size-fits-all technology. We take the time to
+          We take the time to
           understand your business, uncover what's holding it back, and work
-          alongside you to implement solutions that make a real difference.
-          From our first conversation to long after launch, we're committed to
+          alongside you to implement solutions that make a difference.
+          From our first conversation to long term partnership, we're committed to
           helping you grow with confidence.
         </p>
       </header>

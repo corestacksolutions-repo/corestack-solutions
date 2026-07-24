@@ -3,8 +3,8 @@ import { LuArrowRight } from "react-icons/lu";
 
 const CTA = () =>{
       return(
-            <section className="w-full max-w-[1180px] mx-auto px-6">
-                <div className="relative border border-black/20 bg-[#222831] overflow-hidden text-white w-full max-w-[1180px] mx-auto my-34 text-center py-6 px-2 md:p-12 rounded-4xl ">
+            <section className=" px-6">
+                <div className="w-full max-w-[1180px] mx-auto relative border border-black/20 bg-[#222831] overflow-hidden text-white my-34 text-center py-24  px-2 rounded-4xl ">
                     {/*dotted svg bg */}
                     <svg  width="full" height="full" xmlns="http://www.w3.org/2000/svg"
                             className="absolute inset-0 mix-blend-overlay">
@@ -17,14 +17,14 @@ const CTA = () =>{
                     </svg>
 
                     {/*content */}
-                    <div className="relative space-y-8">
+                    <div className="relative space-y-12">
                 
-                        <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-wide">
+                        <h3 className="text-2xl md:text-3xl lg:text-6xl font-bold tracking-wide">
                             Still Have Questions?
                         </h3>
                         
                 
-                        <p className="max-w-3xl mx-auto mt-5 text-[1.3rem] font-light leading-relaxed">
+                        <p className="max-w-3xl mx-auto mt-5 text-[1.3rem] lg:text-2xl font-light leading-relaxed">
                             We are ready to answer your questions and help you understand 
                             what might work best for your business.
                         </p>

@@ -21,13 +21,13 @@ const ContactForm = () =>{
                             <input 
                                type="text"
                                name="name" 
-                               
+                               id="form -neuro"
                                className="
                                    w-1/2
                                    pb-4 
                                    outline-none 
                                     
-                                   borde r-b 
+                                   border-b 
                                    border-[#393E46]/20
                                    text-[15px]
                                    "
@@ -39,6 +39,7 @@ const ContactForm = () =>{
                             <input 
                                type="text" 
                                name="phone"
+                               id="form -neuro"
                                className="
                                    w-1/2
                                    pb-4

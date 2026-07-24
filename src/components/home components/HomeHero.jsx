@@ -23,7 +23,7 @@ const HomeHero = () => {
       />
 
       {/* Optional overlay */}
-      <div className="absolute inset-0 bg-white/20 -z-10" />
+      <div className="absolute inset-0 bg-white/80 -z-10" />
 
       {/* Content */}
       <div className="max-w-[1180px]  px-5 md:px-12 py-10">
@@ -37,7 +37,7 @@ const HomeHero = () => {
         </div>
 
         {/* Headings */}
-        <div className="flex flex-col text-[#03045e] leading-[110%] my-6 text-2xl md:text-5xl font-bold">
+        <div className="flex flex-col text-[#03045e] leading-[110%] my-6 text-2xl md:text-4xl font-bold">
             <h2>Strategic Solutions.</h2>
             <h2>Built Around You.</h2>
             <h2 className="text-[#B77F58]">Designed to Scale.</h2>

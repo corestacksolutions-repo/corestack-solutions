@@ -13,10 +13,10 @@ const Challenges = () => {
         <div className="h-[3px] w-1/10 bg-yellow-600 mx-auto my-6"/>
 
         <p className="text-[1.4rem] font-light text-black leading-relaxed">
-          Every growing business reaches a point where manual processes,
+          All businesses reach a point where manual processes,
           disconnected tools, and outdated systems begin to slow progress. We
           help you identify these challenges and implement
-          practical digital solutions that improve efficiency, customer
+          solutions that improve efficiency, customer
           experience, and sustainable growth.
         </p>
       </header>

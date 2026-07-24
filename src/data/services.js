@@ -68,7 +68,7 @@ export default [
     "cta": "Explore Solution"
   },
   {
-    "id": 4,
+    "id": 5,
     "icon":  LuShieldCheck ,
     "title": "System Maintenance & Technical Support",
     "description": "Ensure business systems remain secure, reliable, updated, and continuously available for daily operations.",
@@ -81,7 +81,7 @@ export default [
     "cta": "Explore Solution"
   },
   {
-    "id": 5,
+    "id": 6,
     "icon": LuSearchCheck,
     "title": "Online Visibility Optimization",
     "description": "Improve your business's online presence so potential customers can discover, trust, and engage with your brand more easily.",

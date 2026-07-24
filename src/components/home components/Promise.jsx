@@ -6,14 +6,6 @@ import { LuArrowRight } from "react-icons/lu";
 const Promise = () => {
   return (
     <section className="relative w-full px-5 md:px-15 py-20 bg-bl ue-50/50">
-      <svg 
-         height="full" 
-         width="full"
-         xmlns="http://www.w3.org/2000/svg"
-         className="hidden absolute inset-0">
-      <path d="M150 5 L75 200 L225 200 Z"
-      />
-    </svg>
 
       {/* Header */}
       <header className="max-w-4xl mx-auto text-center">

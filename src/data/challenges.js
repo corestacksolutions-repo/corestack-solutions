@@ -10,7 +10,7 @@ import {
 const businessChallenges = [
   {
     id: 1,
-    title: "Manual Processes",
+    title: "Too Much Paper Work",
     description:
       "Your team spends valuable time managing paperwork, spreadsheets, phone calls, and repetitive administrative work instead of focusing on growing the business.",
     icon: LuClipboardList,

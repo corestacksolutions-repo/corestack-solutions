@@ -44,7 +44,14 @@ html {
         box-shadow: inset -3px -3px 3px rgb(255, 255, 255),
                     inset 3px 3px 3px -1px rgba(0, 0, 0, 0.2);
     }
-
+#form-neuro{
+        padding: 15px;
+        border-radius: 12px;
+        background: #fff;
+        /* Box-shadow for 3d visualization*/
+        box-shadow: inset -3px -3px 3px rgb(255, 255, 255),
+                    inset 3px 3px 3px -1px rgba(0, 0, 0, 0.2);
+}
 @import "tailwindcss"
       
 

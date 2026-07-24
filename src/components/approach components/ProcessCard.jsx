@@ -4,6 +4,7 @@
 
 const ProcessCard = ({id, icon, title, description, reverse=false}) =>{
         const Icon = icon
+        const stepNo = id < 10 ? `0${id}` : id
         return(
               <article className={
                       `relative
@@ -20,9 +21,9 @@ const ProcessCard = ({id, icon, title, description, reverse=false}) =>{
                   >
                   
                     <div  className={`flex ${ reverse ? 'md:pl-12' : 'justify-end md:pr-12'} w-full`}>
-                        <div id="neuro-in" className={`flex text-[4rem] font-extrabold text-yellow-600 mx-a uto ${ reverse ? 'roundel' : 'roundedfull'}   h-full w-1/2   p-4`}>
+                        <div id="neuro-in" className={`flex text-[4rem] font-extrabold text-gray-300 mx-a uto ${ reverse ? 'roundel' : 'roundedfull'}   h-full w-1/2   p-4`}>
                            <span className=" m-auto">
-                              0{id}
+                              {stepNo}
                            </span>
                         </div>
                         
