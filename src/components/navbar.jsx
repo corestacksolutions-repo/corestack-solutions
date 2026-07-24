@@ -1,5 +1,6 @@
 import {Link, NavLink} from "react-router-dom"
-import logo from "../assets/logo/smr.png"
+// import logo from "../assets/logo/smr.png"
+import logo from '../assets/logo/useLogo.png'
 import { HiMenu, HiX } from "react-icons/hi";
 import { MdMenu } from "react-icons/md";
 import { HiChevronDown } from "react-icons/hi2";
@@ -104,40 +105,67 @@ const Navbar = () => {
                w-full
                px-6
                py-4  
-               bg-white
+               bg-white/30
                shadow-sm
                z-100
                 "
                >
                {/**nav */}
-               <nav 
+               <nav
                className="
-                  hidden 
-                  md:flex 
+                  hidden
+                  md:flex
                   items-center
                   justify-between
                   max-w-[1180px]
-                  mx-auto
                   w-full
+                  mx-auto
                "
                >
-               {/** logo */}
-               <Link 
-                  to='/'
-                  className=""
-               >
-               <figure 
+               {/* Logo */}
+               <Link
+                  to="/"
                   className="
-                     flex 
+                     flex
                      items-center
-               ">
-                  <img src={logo} 
-                     alt="logo" 
+                     gap-3
+                     select-none
+                     transition-opacity
+                     duration-300
+                     hover:opacity-90
+                  "
+               >
+                  <figure className="shrink-0">
+                     <img
+                     src={logo}
+                     alt="CoreStack Solutions Logo"
+                     className="h-12 w-auto"
+                     />
+                  </figure>
+
+                  <div className="flex flex-col text-[#03045e] uppercase leading-none">
+                     <span
                      className="
-                        h-[50px]
-                  "/>
-                  
-               </figure>
+                        text-[1.55rem]
+                        font-bold
+                        tracking-tight
+                     "
+                     >
+                     CoreStack
+                     </span>
+
+                     <span
+                     className="
+                        text-[0.75rem]
+                        font-medium
+                        tracking-[0.55rem]
+                        text-[#03045e]/80
+                        mt-1
+                     "
+                     >
+                     Solutions
+                     </span>
+                  </div>
                </Link>
                {/*nav links */}
                <ul className="
@@ -303,24 +331,24 @@ const Navbar = () => {
                         </>
                      )}     
                      </NavLink>
-
-                     <NavLink to='/contact'
-                     className="
-                        px-8
-                        py-2 
-                        font-semibold
-                        rounded-full
-                        bg-[#03045e]
-                        text-white
-                        shadow-sm
-                        shadow-[#03045e]/20
-                        hover:bg-[#03045e]/90
-                        transition-all duration-300
-                        "
-                     >   
-                     Lets talk
-                </NavLink>
                </ul>
+
+               <NavLink to='/contact'
+                  className="
+                     px-8
+                     py-2 
+                     font-semibold
+                     rounded-full
+                     bg-[#03045e]
+                      text-white
+                     shadow-sm
+                     shadow-[#03045e]/20
+                      hover:bg-[#03045e]/90
+                     transition-all duration-300
+                     "
+                  >   
+                     Let's have a talk
+                </NavLink>
               
                
              
