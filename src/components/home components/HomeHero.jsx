@@ -18,7 +18,7 @@ const HomeHero = () => {
                 relative
                 overflow-hidden
                 min-h-screen
-                pt-26
+                pt-20
             "
         >
 
