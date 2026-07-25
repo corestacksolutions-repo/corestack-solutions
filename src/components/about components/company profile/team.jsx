@@ -24,9 +24,9 @@ const Team = () =>{
                         Meet Our Team
                     </h1>
                     <p className="text-[1.3rem] font-light md:w-7/10">
-                        Behind every solution is a team committed to understanding your business 
-                        and solving real challenges. We bring together different skills and 
-                        perspectives to design practical technology that supports your goals.
+                        CoreStack team committed to solving your business challenges. We bring 
+                        together different skills and 
+                        perspectives to develop technology that supports your goals.
                     </p>
                     </header>
                     

@@ -58,31 +58,43 @@ const HomeHero = () => {
                 "
             />
 
-            {/* ======================================
-                Main Container
-            ======================================= */}
+      {/* Optional overlay */}
+      <div className="absolute inset-0 bg-white/80 -z-10" />
 
-            <div
-                className="
-                    max-w-[1180px]
-                    mx-auto
+      {/* Content */}
+      <div className="max-w-[1180px]  px-5 md:px-12 py-10">
+        {/* Pill / No-Pill */}
+        <div className="flex items-center gap-2 w-fit px-4 py-2 rounded-full bg-white shadow-sm">
+          <LuBox className="text-yellow-600" />
 
-                    min-h-[calc(100vh-80px)]
+          <span className="uppercase tracking-wide text-sm font-medium text-[#B77F58]">
+            Smarter Systems. Powering Growth.
+          </span>
+        </div>
 
-                    flex
-                    items-center
+        {/* Headings */}
+        <div className="flex flex-col text-[#03045e] leading-[110%] my-6 text-2xl md:text-4xl font-bold">
+            <h2>Strategic Solutions.</h2>
+            <h2>Built Around You.</h2>
+            <h2 className="text-[#B77F58]">Designed to Scale.</h2>
+        </div>
 
-                    px-6
-                    md:px-10
-                    lg:px-0
-                "
-            >
+        {/* Text description */}
+        <p className="text-[#4B556F] text-lg">
+            We combine strategy, technology, and execution to help <br />
+            you streamline operations, reach more customers, <br />
+            and achieve sustainable growth.
+        </p>
 
-                {/* ======================================
-                    Hero Content
-                ======================================= */}
+        {/* Service Icons */}
+        <div className="flex flex-wrap gap-8 mt-8">
 
+            {heroServices.map((service) => {
+                const Icon = service.icon;
+
+                return (
                 <div
+                    key={service.id}
                     className="
                         w-full
                         max-w-2xl

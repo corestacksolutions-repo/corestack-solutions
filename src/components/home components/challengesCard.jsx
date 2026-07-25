@@ -13,13 +13,13 @@ const Challengescard = ({id, icon, title, description}) =>{
                        shado
                       border 
                       border
-                      border-blue-600/20 
-                      bg-blue-600/10 
+                      border-blue-600/60 
+                      bg-blue -600/10 
                       radial from-white -100 via-gray-50 to-blue-900/10
                       p-4 
                       w-fit
                       py -2
-                      lg:p -8 
+                      lg:px-8 
                       rounded-full xl md 
                       space- y-4 
                       hover:scale-  105 

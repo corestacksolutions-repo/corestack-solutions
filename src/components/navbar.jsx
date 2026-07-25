@@ -7,87 +7,13 @@ import { HiChevronDown } from "react-icons/hi2";
 import { useState, useReducer, useEffect } from "react";
 
 
-const pricesData =[
-       {
-          id:1,
-          service: 'Business process automation',
-          selectedCurrency: "MWK",
-          price:300000,
-       },
-        {
-          id:2,
-          service: 'Web platforms & digitalpresence',
-          selectedCurrency: "MWK",
-          price:400000,
-       },
-        {
-          id:3,
-          service: 'e-Commerce platforms',
-          selectedCurrency: "MWK",
-          price:450000,
-        },
-        {
-          id:4,
-          service: 'System maintainance & support',
-          selectedCurrency: "MWK",
-          price:420000,
-       },
-       {
-          id:5,
-          service: 'Search optimization & online visibility',
-          selectedCurrency: "MWK",
-          price:15000,
-       },
-   ]
    const api = 'https://api.frankfurter.dev/v2/rates?quotes=USD,MWK'
-   const exchangeRate=7500
+   
 
 const Navbar = () => { 
     
 
-   {/*const [currencies, setCurrencies] = useState({
-                                       id:'',
-                                       currency:''
-                                    })
-   const [rates, setRates] = useState({});
-   useEffect(()=>{
-        const getRates = async () =>{
-            const response = await fetch('https://api.frankfurter.dev/v2/rates?quotes=USD,MWK');
-            const data = await response.json();
-            const formattedRates = {};
-            data.forEach((rate)=>{
-                 formattedRates[rate.quote]=rate.rate
-               })
-            
-            setRates(formattedRates);
-            
-        }
-        getRates()
-   },[]);
-
-   //  RATE
-   const usdRate =
-    rates.MWK && rates.USD
-    ? rates.MWK / rates.USD
-    : null;
-
-  const handleCurrency = (e, item) =>{
-         setCurrencies({
-               ...currencies,
-               id:item.id,
-               currency:e.target.value
-             }
-         )
-         console.log('CURRENCIES', currencies)
-  }
-     
-
-   const [viewPrice, setViewPrice] = useState(false);
-   const togglePriceView = () =>{
-         setViewPrice(!viewPrice)    
-        }
-
-   */}
+  
     // TOGGLE MENU BAR
    const [openMenu, setOpenMenu] = useState(false);
    const toggleMenu = () =>{
@@ -105,7 +31,7 @@ const Navbar = () => {
                w-full
                px-6
                py-4  
-               bg-white/30
+               bg-white /30
                shadow-sm
                z-100
                 "
@@ -355,130 +281,157 @@ const Navbar = () => {
             </nav>
  
             {/*menu button */}
-            <button onClick={toggleMenu}
-              className="md:hidden z-50 rounded-md"
-              >
-               <MdMenu className="size-8"/>
-            </button>
+            <div className="md:hidden w-full flex justify-between items-center">
+                 <Link to='/'
+                 >
+                  <figure className="shrink-0">
+                        <img
+                        src={logo}
+                        alt="CoreStack Solutions Logo"
+                        className="h-10 w-auto"
+                        />
+                  </figure>
+                 </Link>
+
+                  <button onClick={toggleMenu}
+                          className="md:hidden z-50 rounded-md"
+                  >
+                     <MdMenu className="size-8"/>
+                  </button>
+            </div>
+           
 
 
              {/*MOBILE MENU */}
-             <nav className={`
+             <div className={`
                   fixed
                   top-0  
-                  left-0
+                  right-0
+                  
                   ${
                      openMenu ?
-                     'translate-x-[0] translate-y-[0] opacity-100' 
+                     'translate-x-[0] opacity-100' 
                      :
-                     'translate-x-[100%] translate-y-[-100%] opacity-0'
+                     'translate-x-[100%] opacity-0'
                   }
                   transition-all duration-500
                   z-50
-                  flex
-                  flex-col 
-                  justify-between
-
-                  gap-[3rem]
                   md:hidden 
-                  w-full 
+                  w-full
                   h-full 
-                  bg-white
-                  pb-10 pt-5
-                  px-2
+                  flex
+                  justify-end
                   `}
                >
-                <div className="relative w-full px-5">
-                   <button onClick={toggleMenu} 
-                     className="absolute right-3 p-2 rounded-full bg-gray-200/20">
-                     <HiX className="size-7 text-black/30 shrink-0"/>
-                   </button>
-                </div>
-                <ul className="
-                  flex 
-                  flex-col
-                  items-center 
-                  
-                  gap-15 
-                  z-100
-                  "
-                  >
-                 <NavLink 
-                    
-                    to="/"
-                    onClick={toggleMenu}
-                    className="hover:text-[#03045e] transition-all duration-300 "
+                  {/*overlay */}
+               <div className="pointer-events-none fixed left-0 top-[4rem] w-full h-screen bg-white/60 backdrop-blur-md"></div>
+                 <nav className="
+                        w-8/10 
+                        z-100 
+                        bg-white
+                        flex
+                        flex-col
+                        items-end
+                        gap-10
+                        py-3
+                        px-6
+                        
+                        ">
+                    <button onClick={toggleMenu} 
+                         className="p-2 rounded-full bg-gray-200/20">
+                         <HiX className="size-7 text-black/30 shrink-0"/>
+                    </button>
+                
+                   <ul className="
+                        
+                        w-full
+                        flex 
+                        flex-col
+                        gap-15 
+                        px-8
+                        text-[1.2rem]
+                    ">
+                     <NavLink  
+                       to="/"
+                       onClick={toggleMenu}
+                       className={({ isActive }) => `
+                            transition-all duration-300 
+                            ${isActive 
+                            ? "text-[#03045e]" 
+                            :  ""
+                        }
+                     `}
                     >
                         Home
-                 </NavLink>
-                 <NavLink 
-                    to="/solutions"
-                    onClick={toggleMenu}
-                    className="">
+                    </NavLink>
+                    <NavLink 
+                       to="/services"
+                       onClick={toggleMenu}
+                       className={({ isActive }) => `
+                            transition-all duration-300 
+                            ${isActive 
+                            ? "text-[#03045e]" 
+                            : ""
+                        }
+                     `}
+                    >
                         Services
-                 </NavLink>
-                 <NavLink 
-                    to="/approach"
-                    onClick={toggleMenu}
-                    className="">
+                    </NavLink>
+                    <NavLink 
+                       to="/approach"
+                       onClick={toggleMenu}
+                       className={({ isActive }) => `
+                            transition-all duration-300 
+                            ${isActive 
+                            ? "text-[#03045e]" 
+                            : ""
+                        }
+                     `}>
                          Approach
-                  </NavLink>
-                  <NavLink 
-                    to="/about"
-                    onClick={toggleMenu}
-                    className="">
-                        current solutions
-                 </NavLink>
-                 <NavLink 
-                    to="/about"
-                    onClick={toggleMenu}
-                    className="">
+                    </NavLink>
+                    <NavLink 
+                       to="/products"
+                       onClick={toggleMenu}
+                       className={({ isActive }) => `
+                            transition-all duration-300 
+                            ${isActive 
+                            ? "text-[#03045e]" 
+                            : ""
+                         }
+                      `}>
+                        Products
+                    </NavLink>
+                    <NavLink 
+                       to="/about"
+                       onClick={toggleMenu}
+                       className={({ isActive }) => `
+                            transition-all duration-300 
+                            ${isActive 
+                            ? "text-[#03045e]" 
+                            : ""
+                        }
+                     `}>
                         About
                  </NavLink>
-              </ul>
-               {/*user guide */}
-              <div 
-                  className="
-                    flex 
-                    justify-between 
-                    
-                    font-light
-                    border-t
-                    border-black/20
-                    pt-[4rem] 
-                    "
-               >
-                {/*PRICE OVERVIEW BUTTON */}
-                <button 
+               </ul>
+              
+                  <Link to='/contact'
                     className="
-                    flex
-                    items-center
-                    gap-2
-                    group
-                    px-8 
-                    py 
-                    border 
-                    border-black/20 
-                    rounded-full"
-                   >   
-                   Pricing overview
-                   <HiChevronDown className="size-4 mx-auto text-black/40 -rotate-90"/>
-                </button>
-
-                <Link to='/contact'
-                    className="
-                     flex
-                     items-center
+                     self-center
+                     mt-24 auto
                      px-8 
                      py-2 
+                     w-8/10
                      rounded-full 
-                     bg-blue-900
+                     bg-[#03045e]
+                     font-semibold
+                     text-center
                      text-white"
                    >   
-                   Lets talk
-                </Link>
-             </div>
-            </nav>
+                   Let's have a talk
+                 </Link> 
+              </nav>
+            </div>
            
              
             
