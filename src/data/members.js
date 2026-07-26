@@ -35,16 +35,12 @@ export default [
               {
 
                 id:2,
-                img:smart,
+                img:'',
                 alt:"Gaddaf Ayub",
                 name:'Gaddaf Ayub',
                 role:'FullStack Engineer | Co-Founder | Operations ',
                 description:`
-                       As Frontend Engineer, Ishmael 
-                       leads the design and 
-                       development of intuitive, 
-                       responsive, and engaging 
-                       user interfaces.`,
+                       As FullStack Engineer,`,
                 social:{
                        Phone:LiaPhoneSolid,
                        WhatsApp:LiaWhatsapp,
