@@ -10,6 +10,7 @@ const About = () => {
             <>
              <Hero/>
              <Profile/>
+             
             </>
     )
 }           

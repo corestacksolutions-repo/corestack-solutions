@@ -9,7 +9,6 @@ const Profile = ()=> {
            <>
             <AboutUs/>
             <OurDirection/>
-            
             <WhyUs/>
             <Team/>
         

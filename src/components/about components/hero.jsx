@@ -1,3 +1,4 @@
+import { LiaQuestionCircle } from "react-icons/lia"
 
 
 
@@ -29,7 +30,7 @@ const Hero = () =>{
                       max-w-[1180px]
                       flex
                       m-auto
-                      bg-radial-[at_50%_75%] from-[#03045e]/80 to-[#000]/30
+                      bg-rad ial -[at_50%_75%] from-[#03045e]/80 to-[#000]/30
 
                "> 
                {/*bg img */}
@@ -48,51 +49,63 @@ const Hero = () =>{
                   " 
                 />
                 {/*overlay */}
-                <div className="absolute inset-0 bg-black/80 w-full h-full"/>
+                <div className="absolute inset-0 bg-black/0 w-full h-full"/>
                 {/*content */}
                <div 
                   className="
                      relative
                      flex
                      flex-col
-                     m-auto
-                     items-center
-                     justify-center
+                     mx-auto
                      text-center
-                     text-white/80
+                     text -white/80
                      space-y-8
                      px-3
                      lg:px-8
                      py-8
+                     bord er
+                     
                      
                   "> 
                   <span 
                      className="
-                     tracking-widest
+                     flex
+                     items-center
+                     gap-3
+                     tracking-[30%]
                      uppercase
                      text-[12px]
-                     text-yellow-500
-
-                     hidden
+                     text-yellow-700
+                     bg-white
+                     shadow-sm
+                     mx-auto
+                     w-fit
+                     bor der
+                     font-semibold
+                     rounded-full
+                     px-4
+                     py-2
                      ">
-                     CoreStack Solutions
+                     <LiaQuestionCircle size={24}/>
+                     Who are We
                   </span>
                   <h1 
                      className="
                         text-4xl
-                        md:text-5xl
-                        lg:text-6xl
-                        font-extrabold
+                        md:text-6xl
+                        font-bold
+                        leading-tight
                         
                      ">
-                     Simplifying Business Operations
+                     More Than Software. 
+                     <br/>
+                     A Partner in Business Improvement.
                   </h1>
                   <p 
                      className="
                      text-xl  
                   ">                     
-                     Learn what drives CoreStack,  how we think, and the principles that 
-                     shape every solution we deliver
+                     
                </p>
                {/*button for scrolling down */}
                <a 
