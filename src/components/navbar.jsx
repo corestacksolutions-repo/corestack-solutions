@@ -5,9 +5,10 @@ import { HiMenu, HiX } from "react-icons/hi";
 import { MdMenu } from "react-icons/md";
 import { HiChevronDown } from "react-icons/hi2";
 import { useState, useReducer, useEffect } from "react";
+import { LiaChevronDownSolid, LiaMoneyBillAlt, LiaMoneyBillWaveSolid, LiaShoppingCartSolid } from "react-icons/lia";
 
 
-   const api = 'https://api.frankfurter.dev/v2/rates?quotes=USD,MWK'
+const api = 'https://api.frankfurter.dev/v2/rates?quotes=USD,MWK'
    
 
 const Navbar = () => { 
@@ -19,6 +20,11 @@ const Navbar = () => {
    const toggleMenu = () =>{
             setOpenMenu(!openMenu) 
          }
+   //drop down menu
+   const [isExpanded, setExpanded] = useState(false)
+   const handleExpansion = () =>{
+         setExpanded(!isExpanded)
+   }
 
    return (
           <header 
@@ -197,37 +203,98 @@ const Navbar = () => {
                         </>
                      )}   
                      </NavLink>
+                     {/*drop down */}
+                    <div className="relative group">
+                        <NavLink
+                        to="/products"
+                        className={({ isActive }) => `
+                           relative
+                           ${isActive 
+                              ?"text-[#03045e] " 
+                              : ""
+                           }
+                        `}
+                        >
+                        {({isActive})=>(
+                           <>
+                              Products
+                              <div className={`
+                                 absolute 
+                                 left-0 
+                                 bottom-0
+                                 h-[0.5px]
+                                 bg-[#03045e]
+                                 transition-all duration-500
+                                 ${isActive 
+                                    ? 'w-full'
+                                    : 'w-0'
+                                 }
+                                 `}
+                              />
+                           </>
+                        )} 
+                        
+                        </NavLink>
 
-                     <NavLink
-                     to="/products"
-                     className={({ isActive }) => `
-                         relative
-                         ${isActive 
-                           ?"text-[#03045e] " 
-                           : ""
-                        }
-                     `}
-                     >
-                     {({isActive})=>(
-                        <>
-                           Products
-                            <div className={`
-                               absolute 
-                               left-0 
-                               bottom-0
-                               h-[0.5px]
-                               bg-[#03045e]
-                               transition-all duration-500
-                               ${isActive 
-                                 ? 'w-full'
-                                 : 'w-0'
-                                }
-                              `}
-                             />
-                        </>
-                     )}   
-                     </NavLink>
+                        <div className="
+                                absolute 
+                                w-[500%] 
+                                top-10 
+                                left-1/2 
+                                -translate-x-1/2
+                                 translate-y-5
+                                shadow
+                                rounded-xl
+                                bg-white
+                                min-h-40
+                                p-6
+                                invisible
+                                opacity-0
+                                group-hover:visible
+                                group-hover:translate-y-0
+                                group-hover:opacity-100
+                                transition-all
+                                duration-500
 
+                                flex
+                                flex-col
+                                gap-3
+                                font-normal
+                                text-[1rem]
+                                text-black
+                           ">
+                            <NavLink 
+                              to="/products"
+                              onClick={toggleMenu}
+                              className={({ isActive }) => `
+                                    flex items-center gap-2
+                                    transition-all duration-300
+                                    ${isActive 
+                                    ? "text-[#03045e]" 
+                                    : ""
+                                 }
+                              `}>
+                                 <LiaShoppingCartSolid size={24}/>
+                                 Smartshop
+                           </NavLink>
+                           <NavLink 
+                              to="/booking"
+                              onClick={toggleMenu}
+                              className={({ isActive }) => `
+                                    flex items-center gap-2
+                                    transition-all duration-300
+                                    ${isActive 
+                                    ? "text-[#03045e]" 
+                                    : ""
+                                 }
+                              `}>
+                                 <LiaMoneyBillWaveSolid size={24}/>
+                                 SmartBooking
+                           </NavLink>
+
+
+                        </div>
+                     </div>
                      <NavLink 
                      to="/about"
                      className={({ isActive }) => `
@@ -321,6 +388,7 @@ const Navbar = () => {
                   h-full 
                   flex
                   justify-end
+                  overflow-auto
                   `}
                >
                   {/*overlay */}
@@ -389,18 +457,47 @@ const Navbar = () => {
                      `}>
                          Approach
                     </NavLink>
-                    <NavLink 
-                       to="/products"
-                       onClick={toggleMenu}
-                       className={({ isActive }) => `
-                            transition-all duration-300 
-                            ${isActive 
-                            ? "text-[#03045e]" 
-                            : ""
-                         }
-                      `}>
-                        Products
-                    </NavLink>
+                    
+
+
+                    {/* dropdown  products */}
+                    <div className={`
+                            ${isExpanded ? 'max-h-50 border-black/0': 'max-h-9 border-black/0'} -translate-x-2
+                            p-2 w-full overflow-hidden border  rounded-xl transition-all duration-1000`}>
+                        <span onClick={handleExpansion} className="w-full flex gap-6 ustify-between items-center">
+                           Products
+                           <HiChevronDown className="size-4"/>
+                        </span>
+                        <ul className={`${isExpanded ? 'border-l border-black/15':'opacity-0' } 
+                           flex flex-col gap-3 p-2 w-full bg-gray -100/60 rou nded -xl transtion-all duration-1000`}>
+                           <NavLink 
+                              to="/products"
+                              onClick={toggleMenu}
+                              className={({ isActive }) => `
+                                    transition-all duration-300
+                                    ${isActive 
+                                    ? "text-[#03045e]" 
+                                    : ""
+                                 }
+                              `}>
+                                 Smartshop
+                           </NavLink>
+                           <NavLink 
+                              to="/booking"
+                              onClick={toggleMenu}
+                              className={({ isActive }) => `
+                                    transition-all duration-300
+                                    ${isActive 
+                                    ? "text-[#03045e]" 
+                                    : ""
+                                 }
+                              `}>
+                                 SmartBooking
+                           </NavLink>
+                        </ul>
+                         
+                    </div>
+
                     <NavLink 
                        to="/about"
                        onClick={toggleMenu}
