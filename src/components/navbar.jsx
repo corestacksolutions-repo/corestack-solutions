@@ -469,7 +469,7 @@ const Navbar = () => {
                            <HiChevronDown className="size-4"/>
                         </span>
                         <ul className={`${isExpanded ? 'border-l border-black/15':'opacity-0' } 
-                           flex flex-col gap-3 p-2 w-full bg-gray -100/60 rou nded -xl transtion-all duration-1000`}>
+                           flex flex-col gap-3 p-2 w-full text-[0.9rem] text-black/80 transtion-all duration-1000`}>
                            <NavLink 
                               to="/products"
                               onClick={toggleMenu}
