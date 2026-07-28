@@ -100,7 +100,7 @@ const SmartAction = () => {
                                 <span className="text-[#B77F58]">
                                     Shop
                                 </span>{" "}
-                                in Action
+                                in <br /> Action
                             </h2>
 
                         </div>
