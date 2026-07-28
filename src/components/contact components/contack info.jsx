@@ -118,17 +118,13 @@ const ContactInfor = () =>{
                         </span>
                         
                         <a href="mailto:sales.corestack.com" className="font-extrabold text-lg text-[#03045e]">
-                           info.corestack.com
+                           info@corestack.com
                         </a>
                         <p className="text-sm  text-[#B77F58]">
                             Send Your Inquiry
                         </p>
                       </div>
-                     
-
                     </address>
-
-
                </section>
          )
 }
