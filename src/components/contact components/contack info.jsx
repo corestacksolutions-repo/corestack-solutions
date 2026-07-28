@@ -123,9 +123,6 @@ const ContactInfor = () =>{
                         <p className="text-sm  text-[#B77F58]">
                             Send Your Inquiry
                         </p>
-                        
-                        
-
                       </div>
                      
 
