@@ -5,10 +5,10 @@ import { Link } from "react-router-dom";
 
 const Process = () => {
   return (
-    <section id="how-we-work" className="w-full px-5 md:px-15 py-20 bg-gray-100/50">
+    <section id="our-process" className="w-full px-5 md:px-15 py-20 bg-gray-100/50">
       {/* Header */}
       <header className="max-w-4xl mx-auto text-center space-y-6 space-y-12"> 
-        <h1 className="text-primary font-semibold tracking-wide my-8 uppercase">
+        <h1 className="hidden text-primary font-semibold tracking-wide my-8 uppercase">
           How We Work
         </h1>
 

@@ -13,6 +13,7 @@ const WhyUs = () =>{
                 px-6
                 py-24
                 
+                
             ">
                 <div className=" w-full max-w-[1180px] mx-auto grid md:grid-cols-2 gap-12">
                      
@@ -22,7 +23,7 @@ const WhyUs = () =>{
                            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold ">
                                Why CoreStack
                            </h1>
-                           <h2 className="text-yellow-600 uppercase text-[1rem] mb-12">
+                           <h2 className="text-[#B77F58] uppercase text-[1rem] mb-12">
                                A Different Way to Solve Business Challenges
                            </h2>
                            <p className="font-light tracking-wide leading-relaxed">
@@ -52,8 +53,8 @@ const WhyUs = () =>{
                               tracking -wide
                               
                            ">
-                           <h2 className="">
-                               <b className="text-yellow-600 md:text-black mr-4 font-normal">01</b> Business-First Approach
+                           <h2 className="text-[#B77F58] md:text-black">
+                               <b className=" mr-4 font-normal">01</b> Business-First Approach
                            </h2>
                            <p className="font-light">
                                 We start with your business, not the technology. By understanding your 
@@ -75,8 +76,8 @@ const WhyUs = () =>{
                               tracking-wide
                               leading-relaxed
                            ">
-                           <h2 className="">  
-                               <b className="text-yellow-600 md:text-black mr-4 font-normal">02</b>  Tailored Solutions
+                           <h2 className="text-[#B77F58] md:text-black">  
+                               <b className=" mr-4 font-normal">02</b>  Tailored Solutions
                            </h2>
                            <p className="font-light">
                               
@@ -98,8 +99,8 @@ const WhyUs = () =>{
                               tracking-wide
                               leading-relaxed
                            ">
-                           <h2 className="">
-                              <b className="text-yellow-600 md:text-black mr-4 font-normal">03</b> Long-Term Partnership
+                           <h2 className="text-[#B77F58] md:text-black">
+                              <b className=" mr-4 font-normal">03</b> Long-Term Partnership
                            </h2>
                            <p className="font-light">
                               After delivery, we continue supporting our clients as their businesses evolve.

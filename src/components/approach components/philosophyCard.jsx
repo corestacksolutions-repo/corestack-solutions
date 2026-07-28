@@ -8,7 +8,7 @@ const PhilosophyCard = ({icon, title, description}) =>{
                     <Icon size={24} className="stroke-[1.5px] m-auto text-white"/>
                 </div>
                 <div className="space-y-4 mt-8">
-                    <h2 className="font-semibold text-yellow-600 [#03045e] text-[1.1rem] yellow-600">
+                    <h2 className="font-semibold text-[#B77F58] text-[1.1rem] yellow-600">
                         {title}
                     </h2>
                     <p className="text-[1.1rem] font-light tracking- leading-relaxed">

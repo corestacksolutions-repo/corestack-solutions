@@ -30,7 +30,6 @@ const Services = () => {
                             overflow-hidden
                             p-4
                             md:p-6
-                            lg:p-12
                             rounded-4xl
                             grid 
                             grid-cols-1 

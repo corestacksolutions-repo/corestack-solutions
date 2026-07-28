@@ -46,7 +46,7 @@ const AboutUs = () =>{
                     ">
                      About CoreStack
                   </h1>
-                  <p className="text-yellow-600 md:text-black uppercase text-[16px]">
+                  <p className="text-[#B77F58] md:text-black uppercase text-[16px]">
                     Creating Digital Tools That Support Organizations' Operations.
                   </p>
                   <p 
@@ -96,8 +96,8 @@ const AboutUs = () =>{
                         gap -4
                         gap-8 
                      ">
-                      <div className="border-b border-gray-600 text-black pb-6 space-y-4 tracking-wide">
-                         <h3 className="text-[12px] uppercase  text-yellow-600">
+                      <div className="border border-gray-600/10 shadow-md rounded-xl  text-black p-3 6 space-y-4 tracking-wide">
+                         <h3 className="text-[12px] uppercase  text-[#B77F58]">
                              Business First
                          </h3>
                          <p className="font-light text-[1.1rem]">
@@ -105,8 +105,8 @@ const AboutUs = () =>{
                          </p>
                       </div>
 
-                      <div className="border-b border-gray-600 text-black pb-6 space-y-4 tracking-wide">
-                         <h3 className="text-[12px] font-normal uppercase text-yellow-600">
+                      <div className="border border-gray-600/10 shadow-md rounded-xl text-black p-3 space-y-4 tracking-wide">
+                         <h3 className="text-[12px] font-normal uppercase text-[#B77F58]">
                              Practical Innovation
                          </h3>
                          <p className="font-light text-[1.1rem]">
@@ -114,8 +114,8 @@ const AboutUs = () =>{
                          </p>
                       </div>
 
-                      <div className="border-b border-gray-600 text-black pb-6 space-y-4 tracking-wide">
-                         <h3 className="text-[12px] uppercase text-yellow-600">
+                      <div className="border border-gray-600/10 shadow-md rounded-xl text-black p-3 space-y-4 tracking-wide">
+                         <h3 className="text-[12px] uppercase text-[#B77F58]">
                              Long-Term Partnership
                          </h3>
                          <p className="font-light text-[1.1rem]">

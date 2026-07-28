@@ -33,7 +33,7 @@ const ProcessCard = ({id, icon, title, description, reverse=false}) =>{
                     <div className="hidden md:block w-fit p-4 border rounded-full border-black/20">
                        <Icon className=" text-black/50 size-10"/>
                     </div>
-                    <h3 className="text-[1.5rem] text-yellow-600 font-semibold">
+                    <h3 className="text-[1.5rem] text-[#B77F58] font-semibold">
                           {title}
                     </h3>  
                     <p className="text-lg  text-bla ck/80">

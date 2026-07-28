@@ -24,7 +24,7 @@ const ContactInfor = () =>{
                       px-6
                       
                       bg- gray-200/50
-                      bg-[#f8fafc] 
+                      bg- [#f8fafc] 
                       border-t
                       border-2
                       border-white
@@ -51,19 +51,23 @@ const ContactInfor = () =>{
                            h-full
                            flex
                            flex-col
+                           gap-2
                            items-center
                            md:items-start
-                           p-4
-                           bg-white
+                           p-8
+                           bg-gray-100
                            rounded-md
                            md:rounded-xl
-                           space-y-4
+                           
                       ">
-                        <FiPhone className="size-6"/>
-                        <a href="tel:+265887914433" className="font-extrabold text-lg">
+                        <span className="bord er border-black/15 g-[#03045e] rounded-md mb-6">
+                            <FiPhone className="size-6"/>
+                        </span>
+                        
+                        <a href="tel:+265887914433" className="font-extrabold text-lg text-[#03045e]">
                              +265 887 914 433
                         </a>
-                        <p className="text-sm text-yellow-600 my-2">Speak With Us</p>
+                        <p className="text-sm text-[#B77F58]">Speak With Us</p>
 
                       </div>
                       {/*WhatsApp */}
@@ -73,56 +77,54 @@ const ContactInfor = () =>{
                            h-full
                            flex
                            flex-col
+                           gap-2
                            items-center
                            md:items-start
-                           p-4
-                           bg-white
+                           p-8
+                           bg-gray-100
                            rounded-md
                            md:rounded-xl
-                           space-y-4
                       ">
-                        <BsWhatsapp className="size-6"/>
-                        <a href="tel:+265981457286" 
-                           className="font-extrabold text-lg
-                         ">
-                             +265 981 457 286
+                        <span className=" bord er border-black/15 g-[#03045e] rounded-md mb-6">
+                            <BsWhatsapp className="size-6"/>
+                        </span>
+                        
+                        <a href="https://wa.me+265981457386" className="font-extrabold text-lg text-[#03045e]">
+                           +265 981 457 286
                         </a>
-                        <p className="text-sm  text-yellow-600 my-2">
+                        <p className="text-sm  text-[#B77F58]">
                             Start A Conversation
                         </p>
 
                       </div>
-                      {/*WhatsApp */}
+                      {/*mail */}
                       <div 
                          className="
+                           
                            w-full
                            h-full
                            flex
                            flex-col
+                           gap-2
                            items-center
                            md:items-start
-                           p-4
-                           bg-white
+                           p-8
+                           bg-gray-100
                            rounded-md
                            md:rounded-xl
-                           space-y-4
                       ">
-                        <FiMail className="size-6"/>
-                        <a href="mailto:+265981457286" 
-                           className="font-extrabold text-lg
-                         ">
-                             sales.corestack.com
+                        <span className=" bord er border-black/15 g-[#03045e] rounded-md mb-6">
+                           <FiMail className="size-6"/>
+                        </span>
+                        
+                        <a href="mailto:sales.corestack.com" className="font-extrabold text-lg text-[#03045e]">
+                           info@corestack.com
                         </a>
-                        <p className="text-sm text-yellow-600 my-2">
+                        <p className="text-sm  text-[#B77F58]">
                             Send Your Inquiry
                         </p>
-
                       </div>
-                     
-
                     </address>
-
-
                </section>
          )
 }
