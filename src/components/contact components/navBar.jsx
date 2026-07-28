@@ -517,7 +517,7 @@ const Navbar = () => {
                  </NavLink>
                </ul>
               
-               <a href="sms:+265887914433&body=Hello%20CoreStack"
+               <a href="sms:+265887914433"
                   className="
                      self-center
                      mt-16
