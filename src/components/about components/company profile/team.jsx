@@ -11,7 +11,7 @@ const Team = () =>{
                     px-6
                     text-[#191b1c]
                     py-24 
-                    bg-white 
+                    
                 ">
                     <header 
                        className="

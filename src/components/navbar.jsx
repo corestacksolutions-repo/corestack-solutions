@@ -1,5 +1,5 @@
 import {Link, NavLink} from "react-router-dom"
-// import logo from "../assets/logo/smr.png"
+
 import logo from '../assets/logo/useLogo.png'
 import { HiMenu, HiX } from "react-icons/hi";
 import { MdMenu } from "react-icons/md";
@@ -8,13 +8,11 @@ import { useState, useReducer, useEffect } from "react";
 import { LiaChevronDownSolid, LiaMoneyBillAlt, LiaMoneyBillWaveSolid, LiaShoppingCartSolid } from "react-icons/lia";
 
 
-const api = 'https://api.frankfurter.dev/v2/rates?quotes=USD,MWK'
+// const api = 'https://api.frankfurter.dev/v2/rates?quotes=USD,MWK'
    
 
 const Navbar = () => { 
     
-
-  
     // TOGGLE MENU BAR
    const [openMenu, setOpenMenu] = useState(false);
    const toggleMenu = () =>{
@@ -173,36 +171,6 @@ const Navbar = () => {
                      )}
                      </NavLink>
 
-
-                     <NavLink 
-                     to="/approach"
-                     className={({ isActive }) => `
-                         relative
-                         ${isActive 
-                           ?"text-[#03045e]" 
-                           : ""
-                        }
-                     `}
-                     >
-                     {({isActive})=>(
-                        <>
-                          Approach
-                            <div className={`
-                               absolute 
-                               left-0 
-                               bottom-0
-                               h-[0.5px]
-                               bg-[#03045e]
-                               transition-all duration-500
-                               ${isActive 
-                                 ? 'w-full'
-                                 : 'w-0'
-                                }
-                              `}
-                             />
-                        </>
-                     )}   
-                     </NavLink>
                      {/*drop down */}
                     <div className="relative group">
                         <NavLink
@@ -307,7 +275,7 @@ const Navbar = () => {
                      >
                      {({isActive})=>(
                         <>
-                           About Us
+                           About
                             <div className={`
                                absolute 
                                left-0 
@@ -324,6 +292,35 @@ const Navbar = () => {
                         </>
                      )}     
                      </NavLink>
+                      <NavLink 
+                     to="/approach"
+                     className={({ isActive }) => `
+                         relative
+                         ${isActive 
+                           ?"text-[#03045e]" 
+                           : ""
+                        }
+                     `}
+                     >
+                     {({isActive})=>(
+                        <>
+                          Approach
+                            <div className={`
+                               absolute 
+                               left-0 
+                               bottom-0
+                               h-[0.5px]
+                               bg-[#03045e]
+                               transition-all duration-500
+                               ${isActive 
+                                 ? 'w-full'
+                                 : 'w-0'
+                                }
+                              `}
+                             />
+                        </>
+                     )}   
+                  </NavLink>
                </ul>
 
                <NavLink to='/contact'

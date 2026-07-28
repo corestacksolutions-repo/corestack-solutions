@@ -95,8 +95,8 @@ const OurDirection = () =>{
                       tracking- [0.1rem] 
                       my-8
                       
-                      text-[16px]
-                      text-yellow-600
+                      text-[1rem]
+                      text-[#B77F58]
                       uppercase
                       
                       ">

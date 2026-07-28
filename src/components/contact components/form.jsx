@@ -4,15 +4,16 @@ import { Link } from "react-router-dom";
 
 const ContactForm = () =>{
            return(
-              <section className="w-full  px-6 md:px-0">
+              <section className="w-full  p-6">
                   
-                  <header className="w-full  mb-16 text-[#393E46]">
-                      <h2 className="uppercas text-[1.3rem] e font-semibold">
-                          Send us a message
+                  <header className="text-center md:text-start w-full  mb-16 text-[#393E46]">
+                      <h2 className="uppercas text-[1.5rem]  font-bold">
+                          Start the conversation.
                       </h2>
-                      <p className="  text-md my-3">
-                          Tell us about your business,
-                          project, or idea.
+                      <p className="  text-md my-3 md:w-8/10">
+                          The best solution begins with a conversation.
+                          Use the form below to tell us about your business
+                          or project, and we'll get back to you as soon as we can.
                       </p>
                   </header>
                   <form action="" className="space-y-6 ">
@@ -90,6 +91,7 @@ const ContactForm = () =>{
                             <button 
                                 type="submit" 
                                 className="
+                                    cursor-pointer
                                     w-1/2
                                     rounded-full lg 
                                     md:px-8 
@@ -102,7 +104,7 @@ const ContactForm = () =>{
                                     bg-[#03045e]
                                     mt-4
                             ">
-                                Submit
+                                Send
                             </button>
                             <Link  
                               to='/'                              

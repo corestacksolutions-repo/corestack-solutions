@@ -17,7 +17,7 @@ const Member = ({img, alt, name, role, description, social}) =>{
                     <p className="text-[1.1rem] font-bold">
                     {name}
                     </p>
-                    <p className="text-[0.8rem] text-yellow-600 font-semibold">
+                    <p className="text-[0.8rem] text-[#B77F58] font-semibold">
                     {role}
                     </p>
                 </div>

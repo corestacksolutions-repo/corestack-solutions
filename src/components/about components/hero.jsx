@@ -1,4 +1,6 @@
-import { LiaQuestionCircle } from "react-icons/lia"
+import background from "../../assets/smartshop/background.png";
+import { LiaArrowRightSolid, LiaQuestionCircle } from "react-icons/lia"
+import { Link } from "react-router-dom"
 
 
 
@@ -7,35 +9,17 @@ const Hero = () =>{
          return(
                <section 
                   className="
+                     relative
                      w-full 
-                     h
-                     md:h-[90vh] 
-                     md:max-h-150
-                     lg:h-[90vh]
+                     min-h-[100vh]
                      py-8
                      mt-15
-                     flex
                      px-6
-               ">
-                {/*container */}
-                <div 
-                   className="
-                      relative
-                      rounded-md
-                      md:rounded-xl
-                      overflow-hidden
-                      w-full 
-                      h-
-                      md:h-full
-                      max-w-[1180px]
-                      flex
-                      m-auto
-                      bg-rad ial -[at_50%_75%] from-[#03045e]/80 to-[#000]/30
-
-               "> 
+                     lg:px-0
+               ">      
                {/*bg img */}
                 <img 
-                  src="https://i.pinimg.com/736x/31/78/96/31789686b4acb6729f6d01f66256f531.jpg"
+                  src={background}
                   alt="Contact Background Image" 
                   className="
                      absolute
@@ -49,24 +33,25 @@ const Hero = () =>{
                   " 
                 />
                 {/*overlay */}
-                <div className="absolute inset-0 bg-black/0 w-full h-full"/>
+                <div className="absolute inset-0 bg-white/0 w-full h-full"/>
                 {/*content */}
                <div 
                   className="
                      relative
+                     max-w-6xl
+                     mx-auto
                      flex
                      flex-col
+                     gap-6
                      mx-auto
                      text-center
-                     text -white/80
-                     space-y-8
+                     text-blue-950 [#03045e]
                      px-3
                      lg:px-8
                      py-8
-                     bord er
-                     
-                     
+
                   "> 
+                  {/*badge */}
                   <span 
                      className="
                      flex
@@ -75,7 +60,7 @@ const Hero = () =>{
                      tracking-[30%]
                      uppercase
                      text-[12px]
-                     text-yellow-700
+                     text-[#B77F58]
                      bg-white
                      shadow-sm
                      mx-auto
@@ -91,7 +76,7 @@ const Hero = () =>{
                   </span>
                   <h1 
                      className="
-                        text-4xl
+                        text-2xl
                         md:text-6xl
                         font-bold
                         leading-tight
@@ -99,31 +84,83 @@ const Hero = () =>{
                      ">
                      More Than Software. 
                      <br/>
-                     A Partner in Business Improvement.
+                     A Partner in <strong className="font-bold text-[#B77F58]"> Business</strong> Improvement.
                   </h1>
                   <p 
                      className="
-                     text-xl  
+                     text-[1.3rem] font-light lg:max-w-4xl mx-auto leading-relaxed
                   ">                     
-                     
+                     CoreStack Solutions exists to help businesses make better use technology through thoughtful
+                     decisions and practical execution. The company is shaped by a clear purpose, shared values, and 
+                     a commitment to building solutions that serve real business need. 
                </p>
-               {/*button for scrolling down */}
-               <a 
-                  href="#about-us"
-                  className=" hidden
-                     cursor-pointer
-                     px-8
-                     shadow
-                     shadow-[#03045e]
-                     py-4
-                     rounded-md
-                     bg-[#03045e]
-                     font-bold
-               ">
+               {/*buttons */}
+               <div className="flex flex-col md:flex-row md:justify-center gap-6 mt-6">
+                    <a 
+                      href="#about-us"
+                      className="
+                           group
+                           px-8
+                           shadow
+                           shadow
+                           py-4
+                           rounded-full
+                           bg-[#03045e]
+                           text-white
+                           tracking-widest
+                           font-semibold
+                           uppercase
+                           hover:shadow-xl
+                           hover:-translate-y-1
+                           hover:bg-[#021F46]
+                           transition-all
+                           duration-300
+                     ">
                   Get To Know Us
                </a>
+                <Link
+                  to='/approach'
+                  className="
+                     group
+                     flex 
+                     items-center
+                     justify-center
+                     gap-3
+                     px-8
+                     shadow
+                     py-4
+                     rounded-full
+                     border
+                     border-[#03045e]/20
+                     tracking-widest
+                     font-semibold
+                     uppercase
+                     hover:shadow-xl
+                     hover:-translate-y-1
+                     hover:
+                     transition-all
+                     duration-300
+               ">
+                  our approach
+                  <LiaArrowRightSolid size={18} className="group-hover:translate-x-3 transition-all duration-1000"/>
+               </Link>
+
                </div>
-             </div>
+              
+               </div>
+             
+             {/*bottom fade*/}
+              <div  
+                className="
+                  absolute
+                  bottom-0
+                  w-full 
+                  h-15 
+                  bg-gradient-to-b
+                  from-transparent 
+                  via-[#f8fafc]/60
+                  to-[#f8fafc] "
+               />
             </section>
          )
 }

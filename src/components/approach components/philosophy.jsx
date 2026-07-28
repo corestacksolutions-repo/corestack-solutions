@@ -10,16 +10,16 @@ import PhilosophyCard from "./philosophyCard";
 
 const Philosophy = () =>{
         return(
-               <section className=" bg-[#f8fafc] px-6 py-16">
+               <section id="our-principles" className=" bg-[#f8fafc] px-6 py-16">
                   <header className="w-full max-w-3xl mx-auto text-center mt-16">
                      
                      <h2 className="text-[2.5rem] font-bold">
                           Principles That Guide Our Work
                      </h2>
-                     <div className="h-[3px] w-1/10 bg-yellow-600 mx-auto my-6"/>
+                     <div className="hidden w-1/10 bg-[#B77F58] mx-auto my-6"/>
 
-                     <p className="text-[1.3rem] font-light">
-                          Every approach is guided by principles formed through careful 
+                     <p className="text-[1.3rem] font-light mt-6">
+                          Each approach is guided by principles formed through careful 
                           observation of how businesses operate, adapt to change, and 
                           create value over time.
                      </p>

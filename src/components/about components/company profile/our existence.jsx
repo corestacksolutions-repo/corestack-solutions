@@ -99,7 +99,7 @@ const OurExistence = () =>{
                             uppercase
                             font
                             text-end
-                            
+                            text-[#B77F58]
                             text-[12px]
                             bg-white
                             

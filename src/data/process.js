@@ -12,7 +12,7 @@ const workProcess = [
     label: "Listen",
     title: "Listen & Understand",
     description:
-      "Every great solution starts with a conversation. We take the time to understand your business, your goals, and the challenges standing in your way before recommending any technology.",
+      "Great solution starts with a conversation. We take the time to understand your business, your goals, and the challenges standing in your way before recommending any technology.",
     icon: LuMessagesSquare,
     color: "text-sky-600",
     bg: "bg-sky-50",
@@ -24,7 +24,7 @@ const workProcess = [
     label: "Discover",
     title: "Discover Opportunities",
     description:
-      "Together, we identify opportunities to improve operations, strengthen customer experiences, and simplify everyday processes. Sometimes the biggest wins come from solving the smallest frustrations.",
+      "Together, we identify opportunities to improve operations, strengthen customer experiences, and simplify everyday processes. The biggest wins usually come from solving the smallest hurdles.",
     icon: LuSearch,
     color: "text-violet-600",
     bg: "bg-violet-50",
@@ -36,7 +36,7 @@ const workProcess = [
     label: "Build",
     title: "Build the Right Solution",
     description:
-      "Whether it's implementing SmartShop, developing custom software, or refining existing systems, every solution is designed around your business—not the other way around.",
+      "Whether it's implementing SmartShop, developing custom software, or refining existing systems, every solution is designed around your business-not the other way around.",
     icon: LuBlocks,
     color: "text-amber-600",
     bg: "bg-amber-50",
@@ -48,7 +48,7 @@ const workProcess = [
     label: "Launch",
     title: "Launch with Confidence",
     description:
-      "We guide you through setup, testing, and deployment, ensuring your team feels comfortable and confident using the new solution from day one.",
+      "We guide you through setup, testing, and deployment, ensuring your team is comfortable and confident using the new solution from day one.",
     icon: LuRocket,
     color: "text-emerald-600",
     bg: "bg-emerald-50",
