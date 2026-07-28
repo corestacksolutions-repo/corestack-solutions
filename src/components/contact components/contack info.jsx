@@ -89,7 +89,7 @@ const ContactInfor = () =>{
                             <BsWhatsapp className="size-6"/>
                         </span>
                         
-                        <a href="tel:+265887914433" className="font-extrabold text-lg text-[#03045e]">
+                        <a href="https://wa.me+265981457386" className="font-extrabold text-lg text-[#03045e]">
                            +265 981 457 286
                         </a>
                         <p className="text-sm  text-[#B77F58]">
@@ -97,7 +97,7 @@ const ContactInfor = () =>{
                         </p>
 
                       </div>
-                      {/*WhatsApp */}
+                      {/*mail */}
                       <div 
                          className="
                            
