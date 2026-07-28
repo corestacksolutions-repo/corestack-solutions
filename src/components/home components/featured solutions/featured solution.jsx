@@ -16,7 +16,7 @@ const FeaturedSolutions = () =>{
                            Solutions built around businesses workflow.
                          </h2>
                     </header> 
-                    <div className="w-full grid md:grid-cols-2 gap-6 mt-24">
+                    <div className="w-full gap-6 mt-24">
                          {featuredProducts.map((item)=>
                              <FeaturedCard
                                  key={item.id}

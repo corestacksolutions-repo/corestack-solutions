@@ -100,7 +100,7 @@ const Hero = () =>{
                <a 
                   href="#contact-info"
                   className="
-                     cursor-pointer
+                     
                      px-8
                      shadow
                      shadow-[#03045e]
