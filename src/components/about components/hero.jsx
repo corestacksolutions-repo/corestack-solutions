@@ -14,8 +14,8 @@ const Hero = () =>{
                      min-h-[100vh]
                      py-8
                      mt-15
-                     px-6
-                     lg:px-0
+                     
+                     
                ">      
                {/*bg img */}
                 <img 
@@ -38,7 +38,7 @@ const Hero = () =>{
                <div 
                   className="
                      relative
-                     max-w-6xl
+                     max-w-5xl
                      mx-auto
                      flex
                      flex-col
@@ -47,8 +47,9 @@ const Hero = () =>{
                      text-center
                      text-blue-950 [#03045e]
                      px-3
-                     lg:px-8
+                     px-6
                      py-8
+                    
 
                   "> 
                   {/*badge */}
@@ -76,7 +77,7 @@ const Hero = () =>{
                   </span>
                   <h1 
                      className="
-                        text-2xl
+                        text-3xl
                         md:text-6xl
                         font-bold
                         leading-tight
@@ -88,7 +89,7 @@ const Hero = () =>{
                   </h1>
                   <p 
                      className="
-                     text-[1.3rem] font-light lg:max-w-4xl mx-auto leading-relaxed
+                     text-lg font-light lg:max-w-4xl mx-auto leading-relaxed
                   ">                     
                      CoreStack Solutions exists to help businesses make better use technology through thoughtful
                      decisions and practical execution. The company is shaped by a clear purpose, shared values, and 
@@ -155,6 +156,7 @@ const Hero = () =>{
                   absolute
                   bottom-0
                   w-full 
+                  
                   h-15 
                   bg-gradient-to-b
                   from-transparent 

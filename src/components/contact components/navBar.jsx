@@ -326,12 +326,12 @@ const Navbar = () => {
                   </NavLink>
                </ul>
 
-               <a href="sms:+265981457286&body=Hello%20CoreStack"
+               <a href="sms:+265887914433"
                   className="
                      flex
                      items-center
                      gap-3
-                     px-10
+                     px-8
                      py-2 
                      font-semibold
                      rounded-full
@@ -344,7 +344,7 @@ const Navbar = () => {
                      "
                   >   
                      <BsChat size={18}/> 
-                     Send SMS
+                     Send an SMS
                 </a>
               
                
@@ -408,6 +408,7 @@ const Navbar = () => {
                         gap-10
                         py-3
                         px-6
+                        overflow-y-auto
                         
                         ">
                     <button onClick={toggleMenu} 
@@ -450,20 +451,6 @@ const Navbar = () => {
                     >
                         Services
                     </NavLink>
-                    <NavLink 
-                       to="/approach"
-                       onClick={toggleMenu}
-                       className={({ isActive }) => `
-                            transition-all duration-300 
-                            ${isActive 
-                            ? "text-[#03045e]" 
-                            : ""
-                        }
-                     `}>
-                         Approach
-                    </NavLink>
-                    
-
 
                     {/* dropdown  products */}
                     <div className={`
@@ -515,6 +502,18 @@ const Navbar = () => {
                      `}>
                         About
                  </NavLink>
+                  <NavLink 
+                       to="/approach"
+                       onClick={toggleMenu}
+                       className={({ isActive }) => `
+                            transition-all duration-300 
+                            ${isActive 
+                            ? "text-[#03045e]" 
+                            : ""
+                        }
+                     `}>
+                         Approach
+                    </NavLink>
                </ul>
               
                <a href="sms:+265887914433"
@@ -524,7 +523,7 @@ const Navbar = () => {
                      flex
                      items-center
                      gap-3
-                     px-10
+                     px-6
                      py-2 
                      font-semibold
                      rounded-full
@@ -537,7 +536,7 @@ const Navbar = () => {
                      "
                   >   
                      <BsChat size={18}/> 
-                     Send SMS
+                     Send an SMS
                 </a>
               </nav>
             </div>

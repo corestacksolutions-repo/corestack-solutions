@@ -14,8 +14,6 @@ const Hero = () =>{
                      min-h-[80vh]
                      py-8
                      mt-15
-                     px-6
-                     lg:px-0
                ">      
                {/*bg img */}
                 <img 
@@ -45,7 +43,7 @@ const Hero = () =>{
                      text-center
                      text-blue-950 [#03045e]
                      px-3
-                     lg:px-8
+                     px-6
                      py-8
 
                   "> 
@@ -74,7 +72,7 @@ const Hero = () =>{
                   </span>
                   <h1 
                      className="
-                        text-2xl
+                        text-3xl
                         md:text-6xl
                         font-extrabold
                         leading-tight
@@ -85,7 +83,7 @@ const Hero = () =>{
                   </h1>
                   <p 
                      className="
-                     text-[1.3rem] font-light lg:max-w-4xl mx-auto leading-relaxed
+                     text-lg font-light lg:max-w-4xl mx-auto leading-relaxed
                   ">                     
                      The quality of a solution depends on the thinking behind that comes before it.
                      Our approach is built around understanding the business first, then moving through

@@ -385,7 +385,7 @@ const Navbar = () => {
                   h-full 
                   flex
                   justify-end
-                  overflow-auto
+                 
                   `}
                >
                   {/*overlay */}
@@ -400,11 +400,11 @@ const Navbar = () => {
                         gap-10
                         py-3
                         px-6
-                        
+                        overflow-y-auto
                         ">
                     <button onClick={toggleMenu} 
                          className="p-2 rounded-full bg-gray-200/20">
-                         <HiX className="size-7 text-black/30 shrink-0"/>
+                         <HiX className="size-7 text-black/80 shrink-0"/>
                     </button>
                 
                    <ul className="
@@ -442,20 +442,6 @@ const Navbar = () => {
                     >
                         Services
                     </NavLink>
-                    <NavLink 
-                       to="/approach"
-                       onClick={toggleMenu}
-                       className={({ isActive }) => `
-                            transition-all duration-300 
-                            ${isActive 
-                            ? "text-[#03045e]" 
-                            : ""
-                        }
-                     `}>
-                         Approach
-                    </NavLink>
-                    
-
 
                     {/* dropdown  products */}
                     <div className={`
@@ -507,6 +493,18 @@ const Navbar = () => {
                      `}>
                         About
                  </NavLink>
+                  <NavLink 
+                     to="/approach"
+                     onClick={toggleMenu}
+                     className={({ isActive }) => `
+                        transition-all duration-300 
+                        ${isActive 
+                        ? "text-[#03045e]" 
+                        : ""
+                     }
+                  `}>
+                     Approach
+                  </NavLink>
                </ul>
               
                   <Link to='/contact'
