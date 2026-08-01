@@ -8,6 +8,7 @@ import {
 } 
 from "react-icons/lia";
 import smart from '../assets/images/team/smart.png'
+import ray from '../assets/images/team/ray.png'
 
 export default [
              {
@@ -35,12 +36,12 @@ export default [
               {
 
                 id:2,
-                img:'',
-                alt:"Gaddaf Ayub",
-                name:'Gaddaf Ayub',
+                img: ray,
+                alt:"Ray Kareem",
+                name:'Ray Kareem',
                 role:'FullStack Engineer | Co-Founder | Operations ',
                 description:`
-                       As FullStack Engineer,`,
+                     Business-focused technology enthusiast passionate about building digital solutions that create meaningful, lasting value. Driven by a vision to strengthen Malawi's business ecosystem, he combines technical expertise with strategic thinking to help organizations innovate, grow, and thrive through technology.`,
                 social:{
                        Phone:LiaPhoneSolid,
                        WhatsApp:LiaWhatsapp,
