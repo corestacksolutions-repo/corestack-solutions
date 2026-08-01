@@ -2,14 +2,19 @@ import howItWorks from "../../data/howItWorks";
 
 const HowItWorks = () => {
     return (
-        <section className="w-full px-5 md:px-12 mb-8">
+        <section className="w-full  mb-8">
             <div
                 className="
                     w-full
                     bg-gray-100/50
-                    rounded-xl
-                    p-5
-                    lg:p-8
+
+                    lg:max-w-[1180px]
+                    mx-auto
+
+            rounded-none
+            sm:rounded-xl
+
+            px-5 md:px-10 p-2 pb-6 lg:py-4 lg:px-6 
                 "
             >
                 {/* Heading */}

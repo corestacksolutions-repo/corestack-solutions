@@ -1,19 +1,24 @@
 import { HiMiniArrowSmallDown } from "react-icons/hi2";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { Link } from "react-router-dom";
-import heroImg from "../../assets/smartshop/hero.png";
+import cta from "../../assets/smartshop/CTA.png";
 
 
 const CTA = () => {
   return (
-    <section className="w-full px-5 md:px-12 mb-8">
+    <section className="w-full  mb-8">
         <div
             className="
                 w-full
                  bg-[#03045E]
-                rounded-xl
-                p-5
-                lg:p-8
+
+                 lg:max-w-[1180px]
+                    mx-auto
+
+            rounded-none
+            sm:rounded-xl
+
+            px-5 md:px-10 p-2 pb-6 lg:py-4 lg:px-6 
                 grid
                 grid-col-1
                 md:grid-cols-2
@@ -90,7 +95,7 @@ const CTA = () => {
                             "
                         >
 
-                            book a free consultation
+                            get started today
 
                             <IoIosArrowRoundForward
                                 size={16}
@@ -169,7 +174,7 @@ const CTA = () => {
                         />
 
                         <img
-                            src={heroImg}
+                            src={cta}
                             alt="SmartShop Dashboard Preview"
                             className="
                                 block

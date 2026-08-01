@@ -174,7 +174,7 @@ const Navbar = () => {
                      {/*drop down */}
                     <div className="relative group">
                         <NavLink
-                        to="/products"
+                        to="/products/:id"
                         className={({ isActive }) => `
                            relative
                            ${isActive 
@@ -232,7 +232,7 @@ const Navbar = () => {
                                 text-black
                            ">
                             <NavLink 
-                              to="/products"
+                              to="/products/smart-shop"
                               onClick={toggleMenu}
                               className={({ isActive }) => `
                                     flex items-center gap-2
@@ -246,7 +246,7 @@ const Navbar = () => {
                                  Smartshop
                            </NavLink>
                            <NavLink 
-                              to="/booking"
+                              to="/products/smart-booking"
                               onClick={toggleMenu}
                               className={({ isActive }) => `
                                     flex items-center gap-2

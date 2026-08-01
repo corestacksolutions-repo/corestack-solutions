@@ -5,21 +5,41 @@ import ChallengeCard from "./ChallengeCard"
 
 const ProblemStatement = () => {
   return (
-    <section className="w-full px-5 md:px-12 mb-8">
-        <div className="bg-gray-100/50 w-full p-2 pb-6 lg:py-4 lg:px-6 rounded-xl">
+    <section className="w-full  mb-8">
+        <div className="bg-gray-100/50 w-full lg:max-w-[1180px]
+                    mx-auto px-5 md:px-10 p-2 pb-6 lg:py-4 lg:px-6 rounded-none sm:rounded-xl">
             <header className=" w-fit text-left space-y-6">
                           
-                <h3 className="text-[12px] lg:text-[14px] font-bold my-1 uppercase text-[#4B556F]">
-                    the challenge
-                </h3>
-                <h2 className=" text-[#03045E]  text-[1.19rem] lg:text-4xl my-4 font-bold">
-                    <span className='block'>
+                <h3
+                        className="
+                            uppercase
+                            text-[12px]
+                            lg:text-[14px]
+                            tracking-[0.25em]
+                            font-bold
+                            text-[#4B556F]
+                        "
+                    >
+                        the challenge
+                    </h3>
+                
+                <h2
+                        className="
+                            mt-2
+                            text-[2rem]
+                            lg:text-5xl
+                            font-bold
+                            text-[#03045E]
+                            max-w-[600px]
+                        "
+                    >
+                        
                         Running a business is hard 
-                    </span>
-                    <span className='block'>
+                    
+                    
                         enough without these <span className='text-[#B77F58]'>problems</span>.
-                    </span>
-                </h2>
+                    
+                    </h2>
                           
                 <p className=" max-w-[500px] text-[#4B556F] text-[1rem] lg:text-[1.2rem] ">
                     Many retailers lose time, sales and customers because of manual 

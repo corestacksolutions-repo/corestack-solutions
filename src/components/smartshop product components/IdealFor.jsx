@@ -23,19 +23,27 @@ const targets = [
 
 const IdealFor = () => {
   return (
-    <section className="w-full px-5 md:px-12 mb-8">
+    <section className="w-full  mb-8">
         <div
             className="
+            lg:max-w-[1180px]
+                    mx-auto
+
+            rounded-none
+            sm:rounded-xl
+
+            px-5 md:px-10 p-2 pb-6 lg:py-4 lg:px-6 
                 w-full
                 bg-transparent
                 
                 grid
 
+
                 grid-cols-1
                 md:grid-cols-2
 
-                p-5
-                lg:p-8
+                gap-8
+                lg:gap-10
             "
         >
 

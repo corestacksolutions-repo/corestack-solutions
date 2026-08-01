@@ -16,10 +16,15 @@ const SmartAction = () => {
     const slide = smartShopSlides[activeSlide];
 
     return (
-        <section className="w-full px-5 md:px-12 mb-8">
+        <section className="w-full  mb-8">
             <div
                 className="
                     w-full
+
+                    lg:max-w-[1180px]
+                    mx-auto
+
+                    px-5 md:px-10
 
                     bg-gray-100/50
 

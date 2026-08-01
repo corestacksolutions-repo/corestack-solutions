@@ -4,16 +4,20 @@ import SolutionCard from "./SolutionCard";
 
 const MeetSmartShop = () => {
     return (
-        <section className="w-full px-5 md:px-12 mb-8">
+        <section id="meet-smart-shop" className="w-full  mb-8">
             <div
                 className="
                     w-full
-                    bg-gray-100/50
-                    rounded-xl
 
-                    p-4
-                    lg:p-6
+                    lg:max-w-[1180px]
+                    mx-auto
 
+            bg-gray-100/50
+
+            rounded-none
+            sm:rounded-xl
+
+            px-5 md:px-10 p-2 pb-6 lg:py-4 lg:px-6 
                     grid
                     grid-cols-1
                     lg:grid-cols-[55%_1fr]
@@ -159,29 +163,3 @@ export default MeetSmartShop;
 
 
 
-{/* Cards
-                <div 
-                    className="
-                    relative
-                    w-full
-                    
-                    
-                    overflow-hidden
-                    
-                    grid 
-                    grid-cols-1 
-                    md:grid-cols-2 
-                    
-                    gap-6
-                    md:gap-3 
-                    my-12
-                ">
-                                
-                    {smartShopSolutions.map((solution)=>
-                        <SolutionCard 
-                            key={solution.id}
-                            {...solution}
-                        />
-                        )
-                    }
-                </div>  */}

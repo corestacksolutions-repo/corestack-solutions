@@ -265,7 +265,7 @@ const SmartShopHero = () => {
                         {/* Primary */}
 
                         <Link
-                            to="/services"
+                            to="/contact"
                             className="
                                 group
 
@@ -330,72 +330,69 @@ const SmartShopHero = () => {
 
                         {/* Secondary */}
 
-                        <Link
-                            to="/contact"
-                            className="
-                                group
+<a
+    href="#meet-smart-shop"
+    className="
+        group
 
-                                flex
-                                items-center
-                                justify-center
+        flex
+        items-center
+        justify-center
 
-                                gap-2
+        gap-2
 
-                                w-full
-                                sm:w-auto
+        w-full
+        sm:w-auto
 
-                                rounded-full
+        rounded-full
 
-                                border
-                                border-[#C7C3C8]
+        border
+        border-[#C7C3C8]
 
-                                bg-white/70
+        bg-white/70
 
-                                backdrop-blur-sm
+        backdrop-blur-sm
 
-                                px-7
-                                py-3.5
+        px-7
+        py-3.5
 
-                                uppercase
+        uppercase
 
-                                text-sm
+        text-sm
 
-                                font-medium
+        font-medium
 
-                                tracking-wide
+        tracking-wide
 
-                                text-[#03045E]
+        text-[#03045E]
 
-                                transition-all
-                                duration-300
+        transition-all
+        duration-300
 
-                                hover:-translate-y-1
+        hover:-translate-y-1
 
-                                hover:bg-[#03045E]
+        hover:bg-[#03045E]
 
-                                hover:text-white
+        hover:text-white
 
-                                hover:border-[#03045E]
+        hover:border-[#03045E]
 
-                                hover:shadow-lg
-                            "
-                        >
+        hover:shadow-lg
+    "
+>
+    Explore Features
 
-                            Explore Features
+    <HiMiniArrowSmallDown
+        size={16}
+        className="
+            transition-all
+            duration-300
 
-                            <HiMiniArrowSmallDown
-                                size={16}
-                                className="
-                                    transition-all
-                                    duration-300
-
-                                    group-hover:rotate-6
-                                    group-hover:scale-110
-                                "
-                            />
-
-                        </Link>
-
+            group-hover:rotate-6
+            group-hover:scale-110
+        "
+    />
+</a>
                     </div>
 
                                         {/* ==========================
