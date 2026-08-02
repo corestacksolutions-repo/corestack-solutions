@@ -5,16 +5,12 @@ import Container from "../components/contact components/container";
 
 
 
-
-
 const Contact = () => {
     return ( 
             <>
-               <Nav/>
-               
+               <Nav/>            
                <ContactInfor/>
-               <Container/>
-              
+               <Container/>            
             </>
 
     )
