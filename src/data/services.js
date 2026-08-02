@@ -1,3 +1,9 @@
+import automation from "../assets/images/services/automation.jpeg"
+import digitalTransformation from "../assets/images/services/digital-transformation.jpeg"
+import eCommerce from "../assets/images/services/e-commerce-two.jpeg"
+import digitalPlatform from "../assets/images/services/digital-platform.jpeg"
+import systemSupport from "../assets/images/services/system-maintenance.jpeg"
+import seo from "../assets/images/services/seo.jpeg"
 import {
   LuWorkflow,
   LuWaypoints,
@@ -14,6 +20,8 @@ import { TbWorldSearch } from "react-icons/tb";
 export default [
   {
     "id": 1,
+    "image":automation,
+    "alt":'automation',
     "icon": LuWorkflow,
     "title": "Business Process Automation",
     "description": "Automate repetitive operations, eliminate manual bottlenecks, and streamline business workflows through custom software solutions.",
@@ -23,10 +31,12 @@ export default [
       "Reporting Dashboards"
     ],
     "businessImpact": "Reduce manual effort, improve accuracy, and increase operational efficiency.",
-    "cta": "Explore Solution"
+    "cta": "/services"
   },
    {
     "id": 2,
+    "image":digitalTransformation,
+    "alt":'digital-Transformation',
     "icon": LuWaypoints,
     "title": "Digital Transformation Consultancy",
     "description": "Evaluate your business processes to identify digital improvements that simplify operations and increase efficiency.",
@@ -36,11 +46,13 @@ export default [
       "Booking & Service Platforms"
     ],
     "businessImpact": "Improve customer experience and establish a stronger digital presence.",
-    "cta": "Explore Solution"
+    "cta": "/services"
   },
   
   {
     "id": 3,
+    "image":eCommerce,
+    "alt":'e-commerce',
     "icon": LuShoppingBag,
     "title": "E-Commerce Solutions",
     "description": `Sell products and services online through 
@@ -52,10 +64,12 @@ export default [
       "Order & Inventory Management"
     ],
     "businessImpact": "Expand market reach and create additional revenue channels.",
-    "cta": "Explore Solution"
+    "cta": "/services"
   },
   {
     "id": 4,
+    "image":digitalPlatform,
+    "alt":'digital-platforms',
     "icon": LuLayoutDashboard,
     "title": "Custom Digital Platforms",
     "description": "Build professional digital touchpoints that strengthen customer trust, engagement, and business credibility.",
@@ -65,10 +79,12 @@ export default [
       "Booking & Service Platforms"
     ],
     "businessImpact": "Improve customer experience and establish a stronger digital presence.",
-    "cta": "Explore Solution"
+    "cta": "/services"
   },
   {
     "id": 5,
+    "image":systemSupport,
+    "alt":'system-support',
     "icon":  LuShieldCheck ,
     "title": "System Maintenance & Technical Support",
     "description": "Ensure business systems remain secure, reliable, updated, and continuously available for daily operations.",
@@ -78,10 +94,12 @@ export default [
       "Technical Support"
     ],
     "businessImpact": "Minimize downtime and maintain business continuity.",
-    "cta": "Explore Solution"
+    "cta": "/services"
   },
   {
     "id": 6,
+    "image":seo,
+    "alt":'seo/geo/aeo',
     "icon": LuSearchCheck,
     "title": "Online Visibility Optimization",
     "description": "Improve your business's online presence so potential customers can discover, trust, and engage with your brand more easily.",
@@ -91,6 +109,6 @@ export default [
       "Performance Monitoring"
     ],
     "businessImpact": "Help customers find your business at the moment they need your services.",
-    "cta": "Explore Solution"
+    "cta": "/services"
   }
 ]

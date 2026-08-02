@@ -13,7 +13,7 @@ const Promise = () => {
           Our Promise
         </span>
 
-        <h2 className="mx-auto text-yellow-600 text-[0.9rem] uppercase my-8">
+        <h2 className="hidden mx-auto text-yellow-600 text-[0.9rem] uppercase my-8">
           The Principles That Guide Every Partnership
         </h2>
 

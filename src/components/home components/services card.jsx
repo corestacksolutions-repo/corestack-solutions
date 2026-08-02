@@ -3,14 +3,14 @@ import { Link } from "react-router-dom";
 
 
 
-const ServicesCard = ({id, icon, title, description, deliverables, businessImpact,cta }) =>{
+const ServicesCard = ({id,image,alt, icon, title, description, deliverables, businessImpact,cta }) =>{
         const Icon =icon
         return(
               <article className="
                       relative
                       group
                       w-full 
-                      min-h-90
+                      
                       shad ow-sm 
                       sha dow-[#03045e]/10 
                       bord er 
@@ -24,8 +24,9 @@ const ServicesCard = ({id, icon, title, description, deliverables, businessImpac
                       duration-1000"
                   >
                   <header>
-                    <div className="w-fit sm:p-2 p-3  bg-black/2 border border-black/4 rounded-full mb-8">
-                       <Icon className="size-7 text-blu e-800 /80"/>
+                    <div className="w-full  bg-blac k/2 border border-black/4 rounded-xl full mb-8 overflow-hidden">
+                       <Icon className="hidden size-7 text-blu e-800 /80"/>
+                       <img src={image} alt={alt} className="object-cover w-full h-45" />
                     </div>
                     <h3 className="
                           text-xl  
@@ -51,8 +52,8 @@ const ServicesCard = ({id, icon, title, description, deliverables, businessImpac
                             </li>
                        )}
                   </ul>
-                  <footer className="absolute bottom-0 pb-6  w-fit flex flex-col gap-2 items-start font-bold text-blue-900">
-                    <Link href="/services/business-process-automation"
+                  <footer className="w-fit flex flex-col gap-2 items-start font-bold text-blue-900">
+                    <Link to='/services'
                        className="
                           font-semibold 
                           md:opacit y-0 

@@ -214,7 +214,8 @@ const Navbar = () => {
                                 shadow
                                 rounded-xl
                                 bg-white
-                                min-h-40
+                                border
+                                border-blue-600/20
                                 p-6
                                 invisible
                                 opacity-0
@@ -226,7 +227,7 @@ const Navbar = () => {
 
                                 flex
                                 flex-col
-                                gap-3
+                                gap-6
                                 font-normal
                                 text-[1rem]
                                 text-black
@@ -454,7 +455,7 @@ const Navbar = () => {
                         <ul className={`${isExpanded ? 'border-l border-black/15':'opacity-0' } 
                            flex flex-col gap-3 p-2 w-full text-[0.9rem] text-black/80 transtion-all duration-1000`}>
                            <NavLink 
-                              to="/products"
+                              to="/products/smart-shop"
                               onClick={toggleMenu}
                               className={({ isActive }) => `
                                     transition-all duration-300
@@ -466,7 +467,7 @@ const Navbar = () => {
                                  Smartshop
                            </NavLink>
                            <NavLink 
-                              to="/booking"
+                              to="/products/smart-booking"
                               onClick={toggleMenu}
                               className={({ isActive }) => `
                                     transition-all duration-300

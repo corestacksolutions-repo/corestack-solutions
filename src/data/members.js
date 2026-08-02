@@ -16,14 +16,14 @@ export default [
                 id:1,
                 img:smart,
                 alt:"Ishmael Smart",
-                name:'Ishmael Smart Kaunda',
-                role:'Front-End Engineer | Co-Founder | Finance',
+                name:'Ismart Kaunda',
+                role:'Front-End Engineer | Co-Founder | Finances',
                 description:` 
-                       Leads the design and 
-                       development of user interfaces while contributing
-                       to the financial planning and business growth. His 
-                       work focuses on creating digital experiences that are
-                       clear, practical, and aligned with business objectives. 
+                       Curiuos by nature and guided by purpose,
+                       Ismart is an inquisitive thinker who enjoys learning new stuff, 
+                       solving problems, and turning complex ideas into practical solutions.
+                       He believes technology should serve people, strengthen businesses, and
+                       create new opportunities.
                        `,
                 social:{
                        Phone:LiaPhoneSolid,

@@ -11,8 +11,8 @@ const Services = () => {
                           <h1 className="text-3xl md:text-5xl font-bold my-3">
                                   Our Services
                          </h1>
-                         <h2 className="text-center mx-auto text-yellow-600 text-[0.9rem] uppercase my-8">
-                             Digital solutions designed around your business
+                         <h2 className="text-center mx-auto text-yellow-600 text-[1.3rem] my-8">
+                             Digital Solutions Designed Around Your Business
                          </h2>
                           
                         <p className="hidden w-full   text-[1.3rem] font-light  tracking-wide">
@@ -26,10 +26,9 @@ const Services = () => {
                             w-full
                             max-w-[1180px]
                             mx-auto 
-                            bg-gray-100 /40
+                            bg-gray-1 00 /40
                             overflow-hidden
-                            p-4
-                            md:p-6
+                            
                             rounded-4xl
                             grid 
                             grid-cols-1 

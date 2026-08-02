@@ -5,12 +5,11 @@ const CTA = () =>{
            <section className="w-full px-6 py-12 rounded-xl">
                 <div className="w-full max-w-[1128px] mx-auto">
                       <h1 className="">
-                         Ideas matter, Execution matters more.
+                         Thought Shapes The Outcome
                       </h1>
                       <p className="">
-                         .
-                         Explore the principles and process that guide our 
-                         engagements.
+                         The quality of a solution is determined before it is ever built.
+                         Discover the approach that guides our thinking from first conversation.
                       </p>
                       <footer className="">
                           <Link to='/approach'>
