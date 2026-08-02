@@ -16,7 +16,7 @@ const ServicesCard = ({id,image,alt, icon, title, description, deliverables, bus
                       bord er 
                       bord er-[#03045e]/15
                       bg-white 
-                      p-6 
+                      p-4 
                       rounded-3xl md 
                       space-y-4 
                       hover:scale-101 

@@ -151,7 +151,7 @@ const Footer = ()=> {
             <ul className="space-y-5 text-[15px] font-light">
               <li className="flex items-start gap-3">
                 <BsWhatsapp className="mt-1 text-[#03045e]" size={18} />
-                 <a href="tel: +265887914433" className="hover:text-[#03045e]">
+                 <a href="https//wa.me:+265887914433" className="hover:text-[#03045e]">
                   +265 981 457 286
                 </a>
               </li>
@@ -165,8 +165,8 @@ const Footer = ()=> {
 
               <li className="flex items-center gap-3">
                 <FiMail className="text-[#03045e]" size={18} />
-                <a href="mailto:core..." className="hover:text-[#03045e]">
-                  hello@corestack.com
+                <a href="mailto:info@corestacksolutions.tech" className="hover:text-[#03045e]">
+                  info@corestacksolutions.tech
                 </a>
               </li>
             </ul>
