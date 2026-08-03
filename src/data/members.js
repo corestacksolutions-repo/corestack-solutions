@@ -19,7 +19,7 @@ export default [
                 name:'Ismart Kaunda',
                 role:'Front-End Engineer | Co-Founder | Finances',
                 description:` 
-                       Curiuos by nature and guided by purpose,
+                       Curious by nature and guided by purpose,
                        Ismart is an inquisitive thinker who enjoys learning new stuff, 
                        solving problems, and turning complex ideas into practical solutions.
                        He believes technology should serve people, strengthen businesses, and

@@ -45,13 +45,11 @@ const FeaturedCard= ({img, alt, icon, title, headline, use, description,benefits
                               <Link 
                             to={link}
                             className="
-                                w-ful
-                                md:w-fit 7/10
-                                md:mx-auto
+                                w-fit
                                 group
                                 flex 
                                 items-center
-                                justif
+                                justify-center
                                 gap-4
                                 
                                 px-4
