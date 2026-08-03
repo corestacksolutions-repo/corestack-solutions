@@ -326,7 +326,7 @@ const Navbar = () => {
                   </NavLink>
                </ul>
 
-               <a href="sms:+265887914433"
+               <a href="https://wa.me/265981457286?text=Hi+Corestack+,+I+would+like+to+know+about+..."
                   className="
                      flex
                      items-center
@@ -343,8 +343,8 @@ const Navbar = () => {
                      transition-all duration-300
                      "
                   >   
-                     <BsChat size={18}/> 
-                     Send an SMS
+                     <BsChat size={18} className="hidden"/> 
+                     Start a Project
                 </a>
               
                
@@ -516,7 +516,7 @@ const Navbar = () => {
                     </NavLink>
                </ul>
               
-               <a href="sms:+265887914433"
+               <a href="https://wa.me/265981457286?text=Hi+Corestack+,+I+would+like+to+know+about+..."
                   className="
                      self-center
                      mt-16
@@ -535,8 +535,8 @@ const Navbar = () => {
                      transition-all duration-300
                      "
                   >   
-                     <BsChat size={18}/> 
-                     Send an SMS
+                     <BsChat size={18} className="hidden"/> 
+                     Start a Project
                 </a>
               </nav>
             </div>

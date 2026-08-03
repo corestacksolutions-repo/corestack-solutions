@@ -1,68 +1,59 @@
 
+import { FiMail, FiPhone } from "react-icons/fi";
+import { ImFacebook, ImInstagram, ImLinkedin2, ImPhone, ImTwitter, ImWhatsapp } from "react-icons/im";
 
-
-import { AiFillFacebook, AiOutlineFacebook } from "react-icons/ai";
-import { BsFacebook, BsWhatsapp } from "react-icons/bs";
-import { FaFacebook } from "react-icons/fa";
-import { FiFacebook, FiInstagram, FiLinkedin, FiMail, FiMapPin, FiPhone } from "react-icons/fi";
-import { ImFacebook, ImInstagram, ImLinkedin2, ImTwitter } from "react-icons/im";
-import { LiaFacebook } from "react-icons/lia";
-import { MdFacebook } from "react-icons/md";
-import { PiFacebookLogoBold } from "react-icons/pi";
-import { RiFacebookBoxLine } from "react-icons/ri";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import { useState } from "react";
 
 import logo from "../assets/logo/logo.png"
+import { LiaMoneyBillWaveSolid, LiaShoppingCartSolid } from "react-icons/lia";
+import { BiChevronDown } from "react-icons/bi";
+import { LuChevronDown } from "react-icons/lu";
 const Footer = ()=> {
+  //products dropdown
+  const [isExpanded, setIsExpanded]=useState(false);
+  const handleExpansion = () =>{
+        setIsExpanded(!isExpanded)
+        console.log(isExpanded)
+  }
+
+
   return (
     <footer className="bg-gray-100 text-gray-700 py-8 px-6">
       <div className="mx-auto max-w-[1180px]">
 
         {/** LINKS AND SOCIAL */}
-        <div className="grid gap grid-cols-2 lg:grid-cols-4 text-black my-12">
+        <div className="grid grid-cols-2 lg:grid-cols-4 text-black my-12">
            
            {/*SOCIAL */}
            <div className="flex gap-4 lg:col-span-2 w-full h-40">
               <div className="w-fit h-fit grid grid-cols-2 gap-4">
-               
                    <Link to='/'
-                         className="
-                          w-fit h-fit 
-                          rounded-xl 
-                          p-3
-                          bg-gray-300/80
-                          hover:bg-gray-200
-                          transition-all duration-500"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-fit h-fit rounded-xl p-3 bg-gray-300/80 hover:bg-gray-200 transition-all duration-500"
                     >
                      <ImFacebook size={22}/> 
                   </Link> 
 
-                   <Link to='/'
-                          className="
-                            w-fit h-fit 
-                            rounded-xl 
-                            p-3 
-                            bg-gray-300/80
-                            hover:bg-gray-200
-                            transition-all duration-500"
+                   <Link  to='/'
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className=" w-fit h-fit rounded-xl p-3 bg-gray-300/80 hover:bg-gray-200 transition-all duration-500"
                     >
-                     <ImLinkedin2 size={22} /> 
+                     <ImLinkedin2 size={22}/> 
                   </Link> 
 
                    <Link to='/'
-                         className="
-                            w-fit h-fit 
-                            rounded-xl 
-                            p-3 
-                            bg-gray-300/80
-                            hover:bg-gray-200
-                            transition-all duration-500" 
+                         target="_blank"
+                         rel="noopener noreferrer"
+                         className="w-fit h-fit rounded-xl p-3 bg-gray-300/80 hover:bg-gray-200 transition-all duration-500" 
                       >
-                     <ImInstagram size={22} /> 
+                     <ImInstagram size={22}/> 
                   </Link> 
 
                    <Link to='/'
-                          className="
+                          className=" hidden
                             w-fit h-fit 
                             rounded-xl 
                             p-3 
@@ -70,7 +61,7 @@ const Footer = ()=> {
                             hover:bg-gray-200
                             transition-all duration-500"
                       >
-                     <ImTwitter size={22} /> 
+                     <ImTwitter size={22}/> 
                   </Link> 
               </div>
            </div>
@@ -104,20 +95,30 @@ const Footer = ()=> {
                   ">
                    Services
                 </Link>
-                <Link 
-                    to="/approach" 
-                    className="
-                      hover:text-[#03045e]
-                  "> 
-                  Approach
-                </Link>
-                <Link 
-                    to="/products" 
-                    className="
-                      hover:text-[#03045e]
-                  "> 
-                  Products
-                </Link>
+                
+                {/*products dropdown*/}
+                <div className={`${isExpanded ? 'max-h-30 opacity-100 bg-gray00':'max-h-5 opacity '}rounded-md overflow-hidden 
+                     w-fit space-y-2 transition-all duration-1000`}>
+                  
+                  <button onClick={handleExpansion} className="flex items-center gap-1 w-fit opacity-100 cursor-pointer hover:text-[#03045e]"> 
+                      Products
+                      <LuChevronDown className="size-4"/>
+                  </button>
+                  <ul className="flex flex-col gap-3 text [#03045e] px-2">
+                    <NavLink onClick={handleExpansion}
+                      to="/products/smart-shop"
+                      className={`flex items-center gap-2 text-[0.8rem]`}>
+                        <LiaShoppingCartSolid size={20}/>
+                        Smartshop
+                    </NavLink>
+                    <NavLink onClick={handleExpansion}
+                      to="/products/smart-booking"
+                      className={`flex items-center gap-2 text-[0.8rem]`}>
+                        <LiaMoneyBillWaveSolid size={20}/>
+                        SmartBooking
+                    </NavLink>
+                  </ul>
+                </div>
                 <Link 
                     to="/about" 
                     className="
@@ -136,7 +137,7 @@ const Footer = ()=> {
           </div>
 
          {/* Contact */}
-          <div className="text-black">
+          <div className="col-span-2 md:col-span-1 text-black">
             <h3 className="
                 mb-6 
                 text-sm 
@@ -150,8 +151,11 @@ const Footer = ()=> {
 
             <ul className="space-y-5 text-[15px] font-light">
               <li className="flex items-start gap-3">
-                <BsWhatsapp className="mt-1 text-[#03045e]" size={18} />
-                 <a href="https//wa.me:+265887914433" className="hover:text-[#03045e]">
+                <ImWhatsapp className="mt-1 text-[#03045e]" size={18} />
+                 <a href="https://wa.me/265981457286?text=Hi+Corestack+,+I+would+like+to+know+about+..."
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   className="hover:text-[#03045e]">
                   +265 981 457 286
                 </a>
               </li>

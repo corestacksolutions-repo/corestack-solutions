@@ -1,6 +1,6 @@
 import { LiaFacebook, LiaLinkedin, LiaTwitter } from "react-icons/lia";
-import smart from '../../../assets/images/team/smart.png'
-import members from "../../../data/members";
+
+import members from "../../data/members";
 import Member from "./member card";
 
 const Team = () =>{
@@ -9,9 +9,7 @@ const Team = () =>{
                  className="
                     w-full
                     px-6
-                    text-[#191b1c]
-                    py-24 
-                    
+                    text-[#191b1c]  
                 ">
                     <header 
                        className="

@@ -10,7 +10,8 @@ const Contact = () => {
             <>
                <Nav/>            
                <ContactInfor/>
-               <Container/>            
+               <Container/> 
+                       
             </>
 
     )

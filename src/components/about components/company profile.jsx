@@ -1,14 +1,14 @@
-import AboutUs from "./company profile/who are";
-import OurExistence from "./company profile/our existence";
-import OurDirection from "./company profile/mission, vission,values";
-import Approach from "./company profile/our approach";
-import WhyUs from "./company profile/why us";
-import Team from "./company profile/team";
+import AboutUs from "./who are";
+import OurExistence from "./our existence";
+
+import Approach from "./our approach";
+import WhyUs from "./why us";
+import Team from "./team";
 const Profile = ()=> {
       return(
            <>
             <AboutUs/>
-            <OurDirection/>
+            {/*<OurDirection/>*/}
             <WhyUs/>
             <Team/>
         

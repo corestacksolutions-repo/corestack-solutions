@@ -224,7 +224,6 @@ const Navbar = () => {
                                 group-hover:opacity-100
                                 transition-all
                                 duration-500
-
                                 flex
                                 flex-col
                                 gap-6
@@ -260,8 +259,6 @@ const Navbar = () => {
                                  <LiaMoneyBillWaveSolid size={24}/>
                                  SmartBooking
                            </NavLink>
-
-
                         </div>
                      </div>
                      <NavLink 

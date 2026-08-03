@@ -1,16 +1,18 @@
 import Hero from "../components/about components/hero";
-import Profile from "../components/about components/company profile";
-import AboutUs from "../components/about components/company profile/who are";
-import Philosophy from "../components/approach components/philosophy";
-import Process from "../components/approach components/Process";
-import Team from "../components/about components/company profile/team";
-
+import AboutUs from "../components/about components/who are";
+import Vision from "../components/about components/vision";
+import WhyUs from "../components/about components/why us";
+import Team from "../components/about components/team";
+import CTA from "../components/about components/CTA";
 const About = () => {
     return ( 
             <>
              <Hero/>
-             <Profile/>
-             
+             <AboutUs/>
+             <Vision/>
+             <WhyUs/>
+             <Team/>
+             <CTA/>
             </>
     )
 }           

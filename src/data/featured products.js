@@ -37,7 +37,9 @@ export default [
              title:'Manage orders easily', 
              description:'Track orders, manage inventory, and monitor sales from one dashboard.'
             },
-       ]
+       ],
+      cta:'Know More About SmartShop',
+      link:'products/smartshop'
     },
     
 ]

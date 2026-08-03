@@ -2,9 +2,9 @@ import { LiaArrowRightSolid } from "react-icons/lia";
 import { Link } from "react-router-dom";
 
 
-const FeaturedCard= ({img, alt, icon, title, headline, use, description,benefits}) => {
+const FeaturedCard= ({img, alt, icon, title, headline, use, description,benefits, cta, link}) => {
         return(
-                <article className="grid lg:grid-cols-2 w-full rounded-xl bg-gray-100 text-[#222831] px-3 md:px-6 py-6">
+                <article className="grid lg:grid-cols-2 gap-y-12 w-full rounded-xl bg-gray-100 text-[#222831] px-3 md:px-6 py-6">
                     
                   <div className="lg:col-span w-full space-y-6 "> 
                       <h1 className="text-3xl md:text-6xl font-bold text-[#03045e]">
@@ -38,12 +38,12 @@ const FeaturedCard= ({img, alt, icon, title, headline, use, description,benefits
                       </div>    
                   </div> 
                   {/*right side-image plue cta btn */}
-                  <div className="mx-auto  rounded-2xl">
-                        <img src={img} alt={alt} className="w-full lg:-translate-y-15 object-cover rounded-xl " />
+                  <div className="mx-auto">
+                        <img src={img} alt={alt} className="w-full lg:-translate-y-20 object-cover rounded-xl " />
                          {/**cta */}
                          <div className=" flex flex-col md:flex-row gap-4 w-full lg:-translate-y-10">
                               <Link 
-                            to="/products/smartshop"
+                            to={link}
                             className="
                                 w-ful
                                 md:w-fit 7/10
@@ -52,9 +52,9 @@ const FeaturedCard= ({img, alt, icon, title, headline, use, description,benefits
                                 flex 
                                 items-center
                                 justif
-                                gap-8
+                                gap-4
                                 
-                                px-8
+                                px-4
                                 shadow
                                 py-4
                                 rounded-full
@@ -62,16 +62,18 @@ const FeaturedCard= ({img, alt, icon, title, headline, use, description,benefits
                                 text-white
                                 text-[1rem]
                                 lg:text-[1.3rem]
-                                tracking-widest
-                                font-bold
+                                tracking-wide
+                                font-semibold
                                 hover:shadow-xl
                                 hover:-translate-y-1
                                 hover:
                                 transition-all
                                 duration-300
                                 whitespace-nowrap
+
+                                mt-6
                             ">
-                            Explore SmartShop
+                            {cta}
                             <span className="bg-white p-2 rounded-full group-hover:translate-x-3 transition-all duration-1000">
                                  <LiaArrowRightSolid size={18} className=" text-[#03045e]"/>
                             </span>

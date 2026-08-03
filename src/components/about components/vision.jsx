@@ -12,7 +12,7 @@ import { SiSimpleicons, SiSimplex } from "react-icons/si";
 import { TbBulb, TbTargetArrow } from "react-icons/tb";
 
 
-const OurDirection = () =>{
+const Vision = () =>{
          return(
              <section 
                 className="
@@ -233,4 +233,4 @@ const OurDirection = () =>{
          )
 }
 
-export default OurDirection;
+export default Vision;

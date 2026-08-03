@@ -1,17 +1,6 @@
-import { AiOutlineMail } from "react-icons/ai"
-import { BiPhoneIncoming, BiPhoneOutgoing } from "react-icons/bi"
-import { BsPhoneFill, BsPhoneVibrate, BsWhatsapp } from "react-icons/bs"
-import { CiPhone } from "react-icons/ci"
-import { FaPhone, FaWhatsapp } from "react-icons/fa6"
-import { FiMail, FiPhone, FiPhoneOutgoing } from "react-icons/fi"
-import { HiMail } from "react-icons/hi"
-import { LuPhone } from "react-icons/lu"
-import { MdMail, MdPhone } from "react-icons/md"
-import { PiPhone, PiWhatsappLogo, PiWhatsappLogoFill } from "react-icons/pi"
-import { RiMailFill, RiPhoneLine, RiWhatsappLine } from "react-icons/ri"
-import { TbPhonePlus, TbPhoneRinging } from "react-icons/tb"
 
-
+import { FiMail, FiPhone } from "react-icons/fi"
+import { ImWhatsapp } from "react-icons/im"
 
 const ContactInfor = () =>{
          return(
@@ -21,13 +10,8 @@ const ContactInfor = () =>{
                       w-full
                       mt-16
                       py-16
-                      px-6
+                      px-4
                       
-                      bg- gray-200/50
-                      bg- [#f8fafc] 
-                      border-t
-                      border-2
-                      border-white
                       
                       ">
                     <address 
@@ -36,7 +20,7 @@ const ContactInfor = () =>{
                           max-w-[1180px]
                           mx-auto
                           not-italic
-                          
+                         
                           grid
                           md:grid-cols-2
                           lg:grid-cols-3
@@ -86,10 +70,11 @@ const ContactInfor = () =>{
                            md:rounded-xl
                       ">
                         <span className=" bord er border-black/15 g-[#03045e] rounded-md mb-6">
-                            <BsWhatsapp className="size-6"/>
+                            <ImWhatsapp className="size-6"/>
                         </span>
                         
-                        <a href="https://wa.me+265981457386" className="font-extrabold text-lg text-[#03045e]">
+                        <a href="https://wa.me/265981457286?text=Hi+Corestack+,+I+would+like+to+know+about+..." 
+                           className="font-extrabold text-lg text-[#03045e]">
                            +265 981 457 286
                         </a>
                         <p className="text-sm  text-[#B77F58]">
@@ -108,7 +93,7 @@ const ContactInfor = () =>{
                            gap-2
                            items-center
                            md:items-start
-                           p-8
+                           py-8
                            bg-gray-100
                            rounded-md
                            md:rounded-xl
@@ -117,7 +102,7 @@ const ContactInfor = () =>{
                            <FiMail className="size-6"/>
                         </span>
                         
-                        <a href="mailto:sales.corestack.com" className="font-extrabold text-lg text-[#03045e]">
+                        <a href="mailto:info@corestacksolutions.tech" className="font-extrabold text-lg text-[#03045e]">
                            info@corestacksolutions.tech
                         </a>
                         <p className="text-sm  text-[#B77F58]">

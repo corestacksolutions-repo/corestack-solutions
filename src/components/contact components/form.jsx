@@ -1,8 +1,56 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 
 
 const ContactForm = () =>{
+           //form data
+           const [formData, setFormData]= useState({
+               name:'',
+               phone:'',
+               email:'',
+               message:''
+           });
+           // handle input change
+           const handleChange =(e) =>{
+              const {name, value} = e.target;
+
+              setFormData((prev=> ({
+                 ...prev,
+                 [name]: value,
+              })))
+           }
+           // handle submit
+           const handleSubmit = (e) =>{
+               e.preventDefault();
+               //validation
+               //name
+               if (!formData.name.trim()){
+                  alert('Name is required!');
+                  return;
+               }
+               //phone 
+               if (!formData.phone.trim()){
+                  alert('Phone number is required!');
+                  return;
+               }
+               const phoneRegex = /^[0-9]{10,15}$/
+               if (!phoneRegex.test(formData.phone)){
+                  alert('Please enter a valid phone number!');
+                  return;
+               }
+               // email
+               if (!formData.email.trim()){
+                  alert('Email is required!');
+                  return;
+               }
+               if (!formData.email.includes("@")){
+                  alert('Please enter a valid email!');
+                  return;
+               }
+               alert(`Thank you ${formData.name} for contacting us. We will get back to you soon.`)
+               console.log(formData)
+           }
            return(
               <section className="w-full  p-6">
                   
@@ -16,18 +64,18 @@ const ContactForm = () =>{
                           or project, and we'll get back to you as soon as we can.
                       </p>
                   </header>
-                  <form action="" className="space-y-6 ">
+                  <form onSubmit={handleSubmit} className="space-y-6 ">
                      <fieldset className="flex flex- col md:fl ex-row gap-3 justify-between">
                         
                             <input 
                                type="text"
                                name="name" 
-                               id="form -neuro"
+                               value={formData.name}
+                               onChange={handleChange}
                                className="
                                    w-1/2
                                    pb-4 
                                    outline-none 
-                                    
                                    border-b 
                                    border-[#393E46]/20
                                    text-[15px]
@@ -35,30 +83,28 @@ const ContactForm = () =>{
                                    placeholder="Full name"
                                
                             />
-                        
-                        
                             <input 
                                type="text" 
                                name="phone"
-                               id="form -neuro"
+                               value={formData.phone}
+                               onChange={handleChange}
                                className="
                                    w-1/2
                                    pb-4
-                                   outline-none 
-                                    
+                                   outline-none  
                                    border-b 
                                    border-[#393E46]/20
                                    text-[15px]
                                    "
-                               placeholder="Phone"
-                               
+                               placeholder="Phone" 
                             />
-                      
                        
                      </fieldset> 
                      <input 
                         type="text" 
                         name="email"
+                        value={formData.email}
+                        onChange={handleChange}
                         className="
                             w-full
                             pb-4
@@ -74,7 +120,8 @@ const ContactForm = () =>{
                       <textarea 
                         type="text"
                         name="message"
-                         
+                        value={formData.message}
+                        onChange={handleChange}
                         className="
                             w-full
                             pb 
