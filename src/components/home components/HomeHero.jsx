@@ -580,86 +580,92 @@ const HomeHero = () => {
                         "
                     >
 
-                        {/* Client Logos */}
+{/* Client Logos */}
+<div className="flex items-center">
 
-                        <div className="flex items-center">
+    <a
+        href="https://www.nanthsconsults.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Visit Nanth Consults"
+        className="
+            relative
 
-                            <div
-                                className="
-                                    relative
+            h-12
+            w-12
 
-                                    h-12
-                                    w-12
+            rounded-full
 
-                                    rounded-full
+            bg-white
 
-                                    bg-white
+            border
+            border-gray-200
 
-                                    border
-                                    border-gray-200
+            shadow-sm
 
-                                    shadow-sm
+            flex
+            items-center
+            justify-center
 
-                                    flex
-                                    items-center
-                                    justify-center
+            z-20
 
-                                    z-20
+            transition-all
+            duration-300
 
-                                    transition-all
-                                    duration-300
+            hover:-translate-y-1
+            hover:shadow-md
+        "
+    >
+        <img
+            src={nanth}
+            alt="Nanth Consults"
+            className="w-6 object-contain"
+        />
+    </a>
 
-                                    hover:-translate-y-1
-                                    hover:shadow-md
-                                "
-                            >
-                                <img
-                                    src={nanth}
-                                    alt="Nanth Consults"
-                                    className="w-6 object-contain"
-                                />
-                            </div>
+    <a
+        href="https://daa-website.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Visit DAA"
+        className="
+            relative
 
-                            <div
-                                className="
-                                    relative
+            h-12
+            w-12
 
-                                    h-12
-                                    w-12
+            rounded-full
 
-                                    rounded-full
+            bg-white
 
-                                    bg-white
+            border
+            border-gray-200
 
-                                    border
-                                    border-gray-200
+            shadow-sm
 
-                                    shadow-sm
+            flex
+            items-center
+            justify-center
 
-                                    flex
-                                    items-center
-                                    justify-center
+            -ml-3
 
-                                    -ml-3
+            z-10
 
-                                    z-10
+            transition-all
+            duration-300
 
-                                    transition-all
-                                    duration-300
+            hover:-translate-y-1
+            hover:shadow-md
+        "
+    >
+        <img
+            src={daa}
+            alt="DAA"
+            className="w-6 object-contain"
+        />
+    </a>
 
-                                    hover:-translate-y-1
-                                    hover:shadow-md
-                                "
-                            >
-                                <img
-                                    src={daa}
-                                    alt="DAA"
-                                    className="w-6 object-contain"
-                                />
-                            </div>
-
-                        </div>
-
+</div>
                         {/* Trust Copy */}
 
                         <div

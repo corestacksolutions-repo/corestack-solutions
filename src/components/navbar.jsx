@@ -172,38 +172,34 @@ const Navbar = () => {
                      </NavLink>
 
                      {/*drop down */}
-                    <div className="relative group">
-                        <NavLink
-                        to="/products/:id"
-                        className={({ isActive }) => `
-                           relative
-                           ${isActive 
-                              ?"text-[#03045e] " 
-                              : ""
-                           }
-                        `}
-                        >
-                        {({isActive})=>(
-                           <>
-                              Products
-                              <div className={`
-                                 absolute 
-                                 left-0 
-                                 bottom-0
-                                 h-[0.5px]
-                                 bg-[#03045e]
-                                 transition-all duration-500
-                                 ${isActive 
-                                    ? 'w-full'
-                                    : 'w-0'
-                                 }
-                                 `}
-                              />
-                           </>
-                        )} 
-                        
-                        </NavLink>
+<div className="relative group">
+    <button
+        type="button"
+        className="
+            relative
+            flex
+            items-center
+            gap-1
+            cursor-default
+        "
+    >
+        Products
+        <HiChevronDown className="size-4 transition-transform duration-300 group-hover:rotate-180" />
 
+        <div
+            className="
+                absolute
+                left-0
+                -bottom-[2px]
+                h-[0.5px]
+                w-0
+                bg-[#03045e]
+                transition-all
+                duration-500
+                group-hover:w-full
+            "
+        />
+    </button>
                         <div className="
                                 absolute 
                                 w-[500%] 
