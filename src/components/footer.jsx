@@ -119,6 +119,8 @@ const Footer = ()=> {
                     </NavLink>
                   </ul>
                 </div>
+
+                {/* About Page */}
                 <Link 
                     to="/about" 
                     className="
@@ -126,12 +128,23 @@ const Footer = ()=> {
                     ">
                   About
                 </Link>
+
+                {/* Contact Page */}
                 <Link 
                     to="/contact" 
                     className="
                        hover:text-[#03045e]
                     ">
                      Contact
+                </Link>
+
+                {/* Insights Page */}
+                <Link 
+                    to="/leadership-thoughts" 
+                    className="
+                       hover:text-[#03045e]
+                    ">
+                     Leadership Thoughts
                 </Link>
             </ul>
           </div>

@@ -9,6 +9,8 @@ import Contact from "./pages/contact";
 import NoPageFound from "./pages/undefined";
 
 import { createBrowserRouter } from "react-router-dom";
+import Blog from "./pages/Blog";
+import SingleBlog from "./pages/SingleBlog";
 
 const router = createBrowserRouter(
                     [
@@ -16,13 +18,16 @@ const router = createBrowserRouter(
                         Component: Layout,
                         children: [
                             {index: true, Component: Home},
-                            {path: "services", Component: Services},
-                            {path: "about", Component: About},
+                            {path: "/services", Component: Services},
+                            {path: "/about", Component: About},
                             {path: "/products/:id", Component: Products},
-                            {path: "approach", Component: Approach},      
+                            {path: "/approach", Component: Approach},    
+                            {path: "/leadership-thoughts", Component: Blog},
+                            {path: "/leadership-thoughts/:slug", Component: SingleBlog},  
                         ],                    
                        },
-                       {path: "contact", Component: Contact},
+                       {path: "/contact", Component: Contact},
+                       
                        {path: "*", Component:NoPageFound}                    
                     ]);
 export default router;
