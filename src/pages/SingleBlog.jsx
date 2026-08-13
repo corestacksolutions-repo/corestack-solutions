@@ -91,9 +91,10 @@ const SingleBlog = () => {
                     setError(true);
                 }
 
-                setSinglePost(data);
-                console.log("Fetched single post:", data);
+                console.log("FULL POST:", data)
+                console.log("BODY:", data.body)
 
+                setSinglePost(data)
             })
 
             .catch((error) => {
