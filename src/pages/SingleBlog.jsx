@@ -692,9 +692,9 @@ const SingleBlog = () => {
 
                         <PortableText
                             value={singlePost.body}
-                            components={
-                                portableTextComponents
-                            }
+                            // components={
+                            //     portableTextComponents
+                            // }
                         />
 
                     </article>
