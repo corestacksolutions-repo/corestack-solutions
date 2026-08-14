@@ -91,8 +91,8 @@ const ContactInfor = () =>{
                            gap-2
                            items-center
                            md:items-start
-                           px-8
-                           md:px-4
+                           px-
+                           md:px-8
                            py-8
                            bg-gray-100
                            rounded-md

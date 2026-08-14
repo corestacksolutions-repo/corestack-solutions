@@ -28,7 +28,7 @@ const Footer = ()=> {
            {/*SOCIAL */}
            <div className="flex gap-4 lg:col-span-2 w-full h-40">
               <div className="w-fit h-fit grid grid-cols-2 gap-4">
-                   <Link to='/'
+                   <Link to='https://www.facebook.com/share/1KTqv8iZkR/'
                         target="_blank"
                         rel="noopener noreferrer"
                         className="w-fit h-fit rounded-xl p-3 bg-gray-300/80 hover:bg-gray-200 transition-all duration-500"
@@ -36,7 +36,7 @@ const Footer = ()=> {
                      <ImFacebook size={22}/> 
                   </Link> 
 
-                   <Link  to='/'
+                   <Link  to='https://www.linkedin.com/company/corestack-solutions-mw/'
                           target="_blank"
                           rel="noopener noreferrer"
                           className=" w-fit h-fit rounded-xl p-3 bg-gray-300/80 hover:bg-gray-200 transition-all duration-500"
@@ -119,6 +119,8 @@ const Footer = ()=> {
                     </NavLink>
                   </ul>
                 </div>
+
+                {/* About Page */}
                 <Link 
                     to="/about" 
                     className="
@@ -126,12 +128,23 @@ const Footer = ()=> {
                     ">
                   About
                 </Link>
+
+                {/* Contact Page */}
                 <Link 
                     to="/contact" 
                     className="
                        hover:text-[#03045e]
                     ">
                      Contact
+                </Link>
+
+                {/* Insights Page */}
+                <Link 
+                    to="/leadership-thoughts" 
+                    className="
+                       hover:text-[#03045e]
+                    ">
+                     Leadership Thoughts
                 </Link>
             </ul>
           </div>

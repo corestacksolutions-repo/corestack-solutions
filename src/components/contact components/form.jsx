@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-
+const API_URL = 'https://localhost:3000'
 
 const ContactForm = () =>{
            //form data
@@ -22,7 +22,8 @@ const ContactForm = () =>{
            }
            // handle submit
            const handleSubmit = (e) =>{
-               e.preventDefault();
+            try{
+                e.preventDefault();
                //validation
                //name
                if (!formData.name.trim()){
@@ -50,6 +51,45 @@ const ContactForm = () =>{
                }
                alert(`Thank you ${formData.name} for contacting us. We will get back to you soon.`)
                console.log(formData)
+
+               
+
+            //    Creating Payload to send to the server
+               const payload = {
+                name: formData.name,
+                phone: formData.phone,
+                email: formData.email,
+                message: formData.message
+               }
+
+               const response = fetch (`${API_URL}/api/contact`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                // credentials: 'include',
+                body: JSON.stringify(payload)
+               })
+
+               const data = response.json()
+               console.log('Response from server:', data);
+
+               if (!response.ok || !data.success) {
+                alert('Failed to submit the form. Please try again later.');
+               }
+
+               alert('Form submitted successfully!');
+               setFormData({
+                name: '',
+                phone: '',
+                email: '',
+                message: ''
+               })
+
+            }catch{
+                alert('An error occurred while submitting the form.');
+                console.error('Error submitting form:', error);
+            }
            }
            return(
               <section className="w-full  p-6">

@@ -6,6 +6,7 @@ import { MdMenu } from "react-icons/md";
 import { HiChevronDown } from "react-icons/hi2";
 import { useState, useReducer, useEffect } from "react";
 import { LiaChevronDownSolid, LiaMoneyBillAlt, LiaMoneyBillWaveSolid, LiaShoppingCartSolid } from "react-icons/lia";
+import { CgMail } from "react-icons/cg";
 
 
 // const api = 'https://api.frankfurter.dev/v2/rates?quotes=USD,MWK'
@@ -34,13 +35,26 @@ const Navbar = () => {
                z-50
                w-full
                px-6
-               py-4  
+               pb-4  
                bg-white /30
                shadow-sm
                z-100
                 "
                >
-               {/**nav */}
+               {/**blog section */}
+                <div className="hidden md:flex w-full max-w-[1180px] mx-auto justify-between items-center h-8 mb-4 bg-[#B77F58] rounded-b-lg px-4">
+                  <a href="mailto:info@corestacksolutions.com" 
+                     className="font-light text-[#03045e]  white text-[0.9rem] tracking-wider hover:text-white transition-all duration-500">
+                     info@corestacksolutions.com
+                  </a>
+                  <Link 
+                     to="/leadership-thoughts" 
+                     className="font-light  text-[#03045e]  white text-[0.9rem] tracking-wider hover:text-white transition-all duration-500
+                  ">
+                     Leardership Thoughts
+                  </Link>
+                </div>
+               {/*navbar section */}
                <nav
                className="
                   hidden
@@ -172,38 +186,33 @@ const Navbar = () => {
                      </NavLink>
 
                      {/*drop down */}
-                    <div className="relative group">
-                        <NavLink
-                        to="/products/:id"
-                        className={({ isActive }) => `
-                           relative
-                           ${isActive 
-                              ?"text-[#03045e] " 
-                              : ""
-                           }
-                        `}
-                        >
-                        {({isActive})=>(
-                           <>
-                              Products
-                              <div className={`
-                                 absolute 
-                                 left-0 
-                                 bottom-0
-                                 h-[0.5px]
-                                 bg-[#03045e]
-                                 transition-all duration-500
-                                 ${isActive 
-                                    ? 'w-full'
-                                    : 'w-0'
-                                 }
-                                 `}
-                              />
-                           </>
-                        )} 
-                        
-                        </NavLink>
-
+                  <div className="relative group">
+                     <button
+                        type="button"
+                        className="
+                              relative
+                              flex
+                              items-center
+                              gap-1
+                              cursor-default
+                        "
+                     >
+                        Products
+                        <HiChevronDown className="size-4 transition-transform duration-300 group-hover:rotate-180" />
+                        <div
+                           className="
+                              absolute
+                              left-0
+                              -bottom-[2px]
+                              h-[0.5px]
+                              w-0
+                              bg-[#03045e]
+                              transition-all
+                              duration-500
+                              group-hover:w-full
+                           "
+                        />
+                   </button>
                         <div className="
                                 absolute 
                                 w-[500%] 
@@ -319,7 +328,10 @@ const Navbar = () => {
                         </>
                      )}   
                   </NavLink>
+
+                  
                </ul>
+
 
                <NavLink to='/contact'
                   className="
@@ -503,6 +515,18 @@ const Navbar = () => {
                   `}>
                      Approach
                   </NavLink>
+                  <NavLink 
+                     to="/leadership-thoughts"
+                     onClick={toggleMenu}
+                     className={({ isActive }) => `
+                        transition-all duration-300 
+                        ${isActive 
+                        ? "text-[#03045e]" 
+                        : ""
+                     }
+                  `}>
+                     Our blogs
+                  </NavLink> 
                </ul>
               
                   <Link to='/contact'
