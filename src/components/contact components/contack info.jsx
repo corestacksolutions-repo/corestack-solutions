@@ -20,13 +20,11 @@ const ContactInfor = () =>{
                           max-w-[1180px]
                           mx-auto
                           not-italic
-                         
                           grid
                           md:grid-cols-2
                           lg:grid-cols-3
                           gap-6
                           text-[#393E46]
-
                      ">
                       {/*phone */}
                       <div 
@@ -93,6 +91,8 @@ const ContactInfor = () =>{
                            gap-2
                            items-center
                            md:items-start
+                           px-8
+                           md:px-4
                            py-8
                            bg-gray-100
                            rounded-md
