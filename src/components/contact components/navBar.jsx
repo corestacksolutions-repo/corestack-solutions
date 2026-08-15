@@ -37,13 +37,27 @@ const Navbar = () => {
                z-50
                w-full
                px-6
-               py-4  
+               pb-4  
                bg-white /30
                shadow-sm
                z-100
                 "
                >
-               {/**nav */}
+               {/**blog section */}
+                <div className="hidden md:flex w-full max-w-[1180px] mx-auto justify-between items-center h-8 mb-4 bg-[#B77F58] rounded-b-lg px-4">
+                  <a href="mailto:info@corestacksolutions.com" 
+                     className="font-light text-[#03045e]  white text-[0.9rem] tracking-wider hover:text-white transition-all duration-500">
+                     info@corestacksolutions.com
+                  </a>
+                  <Link 
+                     to="/leadership-thoughts" 
+                     className="font-light  text-[#03045e]  white text-[0.9rem] tracking-wider hover:text-white transition-all duration-500
+                  ">
+                     Leardership Thoughts
+                  </Link>
+                </div>
+               {/**navbar section */}
+              
                <nav
                className="
                   hidden
@@ -514,6 +528,18 @@ const Navbar = () => {
                      `}>
                          Approach
                     </NavLink>
+                    <NavLink 
+                     to="/leadership-thoughts"
+                     onClick={toggleMenu}
+                     className={({ isActive }) => `
+                        transition-all duration-300 
+                        ${isActive 
+                        ? "text-[#03045e]" 
+                        : ""
+                     }
+                  `}>
+                     Our blogs
+                  </NavLink> 
                </ul>
               
                <a href="https://wa.me/265981457286?text=Hi+Corestack+,+I+would+like+to+know+about+..."

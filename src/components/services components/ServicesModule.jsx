@@ -35,14 +35,14 @@ const ServiceModule = ({
           {title}
         </h2>
 
-        <p className="mt-6 text-lg leading-8 text-black/70">
+        <p className="mt-6 text-lg leading-8 text-black/70 ">
           {intro}
         </p>
 
         <Link
           to={link}
-          className="
-            inline-flex
+          className=" hidden
+            
             items-center
             gap-2
             mt-8

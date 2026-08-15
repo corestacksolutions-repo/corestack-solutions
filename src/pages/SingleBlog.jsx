@@ -3,7 +3,7 @@
 
 import { useParams, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { format } from "date-fns";
+import {format} from "date-fns";
 import { PortableText } from "@portabletext/react";
 
 import {
