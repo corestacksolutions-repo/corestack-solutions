@@ -10,8 +10,6 @@ import {
     LuArrowLeft,
     LuCalendarDays,
     LuClock3,
-    LuUser,
-    LuArrowUpRight,
 } from "react-icons/lu";
 
 import client from "../utils/sanityClient";
@@ -20,15 +18,11 @@ import portableTextComponents from "../components/blog components/PortableText";
 
 const SingleBlog = () => {
 
-    console.log('🔥 SINGLE BLOG COMPONENT MOUNTED')
-
     const [singlePost, setSinglePost] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(false);
 
     const { slug } = useParams();
-
-    console.log('📝 Current slug:', slug)
 
 
     /* =====================================================
@@ -64,7 +58,14 @@ const SingleBlog = () => {
 
                         author->{
                             name,
-                            bio
+                            bio,
+
+                            image{
+                                asset->{
+                                    _id,
+                                    url
+                                }
+                            }
                         },
 
                         categories[]->{
@@ -89,12 +90,14 @@ const SingleBlog = () => {
 
                 if (!data) {
                     setError(true);
+                    return;
                 }
 
-                console.log("FULL POST:", data)
-                console.log("BODY:", data.body)
+                console.log("FULL POST:", data);
+                console.log("BODY:", data.body);
+                console.log("AUTHOR:", data.author);
 
-                setSinglePost(data)
+                setSinglePost(data);
             })
 
             .catch((error) => {
@@ -105,7 +108,6 @@ const SingleBlog = () => {
                 );
 
                 setError(true);
-
             })
 
             .finally(() => {
@@ -127,6 +129,7 @@ const SingleBlog = () => {
             <main
                 className="
                     min-h-screen
+
                     flex
                     items-center
                     justify-center
@@ -257,6 +260,7 @@ const SingleBlog = () => {
                             inline-flex
                             items-center
                             justify-center
+
                             gap-2
 
                             rounded-full
@@ -300,7 +304,7 @@ const SingleBlog = () => {
             className="
                 w-full
 
-                bg-white
+                bg-[#F8FAFC]
 
                 pt-20
             "
@@ -308,100 +312,132 @@ const SingleBlog = () => {
 
 
             {/* =================================================
-                ARTICLE HERO
+                ARTICLE IMAGE
             ================================================== */}
+
+            {/* max-w-[1400px]
+
+                    mx-auto
+
+                    px-5
+                    md:px-10
+                    lg:px-16
+
+                    pt-6
+                    md:pt-10 */}
 
             <section
                 className="
-                    relative
-
                     w-full
 
-                    min-h-[520px]
-                    md:min-h-[620px]
-
-                    overflow-hidden
-
-                    flex
-                    items-end
+                    
                 "
             >
-
-                {/* Background Image */}
-
-                {singlePost?.mainImage?.asset?.url && (
-
-                    <img
-                        src={singlePost.mainImage.asset.url}
-                        alt={
-                            singlePost.mainImage.alt ||
-                            singlePost.title
-                        }
-
-                        className="
-                            absolute
-                            inset-0
-
-                            w-full
-                            h-full
-
-                            object-cover
-                            object-center
-
-                            scale-[1.01]
-                        "
-                    />
-
-                )}
-
-
-                {/* Image Overlay */}
-
-                <div
-                    className="
-                        absolute
-                        inset-0
-
-                        bg-gradient-to-t
-
-                        from-[#03045E]/95
-                        via-[#03045E]/65
-                        to-[#03045E]/10
-                    "
-                />
-
-
-                {/* Hero Content */}
 
                 <div
                     className="
                         relative
-                        z-10
 
                         w-full
 
-                        max-w-[1400px]
+                        h-[300px]
+                        sm:h-[400px]
+                        md:h-[520px]
+                        lg:h-[620px]
 
-                        mx-auto
+                        overflow-hidden
 
-                        px-5
-                        md:px-12
-                        lg:px-20
+                        
 
-                        pb-12
-                        md:pb-16
+                        bg-[#D6DCEB]
+
+                        shadow-sm
                     "
                 >
 
-                    <div className="max-w-5xl">
+                    {singlePost?.mainImage?.asset?.url ? (
+
+                        <img
+                            src={singlePost.mainImage.asset.url}
+                            alt={
+                                singlePost.mainImage.alt ||
+                                singlePost.title
+                            }
+
+                            className="
+                                absolute
+                                inset-0
+
+                                w-full
+                                h-full
+
+                                object-cover
+                                object-center
+                            "
+                        />
+
+                    ) : (
+
+                        <div
+                            className="
+                                w-full
+                                h-full
+
+                                flex
+                                items-center
+                                justify-center
+
+                                bg-[#E9EDF5]
+
+                                text-[#4B556F]
+                            "
+                        >
+                            No featured image
+                        </div>
+
+                    )}
+
+                </div>
+
+            </section>
 
 
-                        {/* Categories */}
+            {/* =================================================
+                ARTICLE INFORMATION
+            ================================================== */}
+
+            <section
+                className="
+                    w-full
+
+                    max-w-[1400px]
+
+                    mx-auto
+
+                    px-5
+                    md:px-10
+                    lg:px-16
+
+                    pt-10
+                    md:pt-14
+                    lg:pt-16
+
+                    pb-4
+                    md:pb-8
+                "
+            >
+
+                <div className="max-w-5xl">
+
+                    {/* Categories */}
+
+                    {singlePost.categories?.length > 0 && (
 
                         <div
                             className="
                                 flex
                                 flex-wrap
+
                                 items-center
 
                                 gap-2
@@ -410,20 +446,22 @@ const SingleBlog = () => {
                             "
                         >
 
-                            {singlePost.categories?.map(
+                            {singlePost.categories.map(
                                 (category) => (
 
                                     <span
                                         key={category.title}
+
                                         className="
+                                            inline-flex
+                                            items-center
+
                                             rounded-full
 
                                             border
-                                            border-white/20
+                                            border-[#B77F58]/20
 
-                                            bg-white/10
-
-                                            backdrop-blur-md
+                                            bg-[#B77F58]/5
 
                                             px-4
                                             py-2
@@ -431,11 +469,11 @@ const SingleBlog = () => {
                                             text-xs
                                             md:text-sm
 
-                                            font-medium
+                                            font-semibold
 
                                             tracking-wide
 
-                                            text-white
+                                            text-[#B77F58]
                                         "
                                     >
                                         {category.title}
@@ -446,181 +484,153 @@ const SingleBlog = () => {
 
                         </div>
 
+                    )}
 
-                        {/* Article Title */}
 
-                        <h1
+                    {/* Article Title */}
+
+                    <h1
+                        className="
+
+                            hidden
+
+                            max-w-5xl
+
+                            text-3xl
+                            sm:text-4xl
+                            md:text-5xl
+                            lg:text-6xl
+
+                            font-bold
+
+                            leading-[105%]
+
+                            tracking-tight
+
+                            text-[#03045E]
+
+                            break-words
+
+                            mb-6
+                        "
+                    >
+                        {singlePost.title}
+                    </h1>
+
+
+                    {/* Excerpt */}
+
+                    {singlePost.excerpt && (
+
+                        <p
                             className="
-                                max-w-5xl
+                                max-w-4xl
 
-                                text-3xl
-                                sm:text-4xl
-                                md:text-6xl
-                                lg:text-7xl
+                                text-base
+                                md:text-lg
+                                lg:text-xl
 
-                                font-bold
+                                leading-7
+                                md:leading-8
 
-                                leading-[105%]
+                                text-[#4B556F]
 
-                                tracking-tight
-
-                                text-white
-
-                                break-words
-
-                                mb-6
+                                mb-8
                             "
                         >
-                            {singlePost.title}
-                        </h1>
+                            {singlePost.excerpt}
+                        </p>
+
+                    )}
 
 
-                        {/* Excerpt */}
+                    {/* Article Meta */}
 
-                        {singlePost.excerpt && (
+                    <div
+                        className="
+                            flex
+                            flex-wrap
 
-                            <p
-                                className="
-                                    max-w-3xl
+                            items-center
 
-                                    text-base
-                                    md:text-lg
-                                    lg:text-xl
+                            gap-x-5
+                            gap-y-3
 
-                                    leading-7
-                                    md:leading-8
+                            text-sm
 
-                                    text-white/80
+                            text-[#4B556F]
+                        "
+                    >
 
-                                    mb-8
-                                "
-                            >
-                                {singlePost.excerpt}
-                            </p>
-
-                        )}
-
-
-                        {/* Article Meta */}
+                        {/* Date */}
 
                         <div
                             className="
                                 flex
-                                flex-wrap
                                 items-center
 
-                                gap-x-5
-                                gap-y-3
-
-                                text-sm
-
-                                text-white/80
+                                gap-2
                             "
                         >
 
-                            {/* Date */}
-
-                            <div
-                                className="
-                                    flex
-                                    items-center
-                                    gap-2
-                                "
-                            >
-
-                                <LuCalendarDays
-                                    size={17}
-                                />
-
-                                <span>
-                                    {singlePost.publishedAt
-                                        ? format(
-                                            new Date(
-                                                singlePost.publishedAt
-                                            ),
-                                            "dd MMMM yyyy"
-                                        )
-                                        : "No date"
-                                    }
-                                </span>
-
-                            </div>
-
-
-                            {/* Divider */}
-
-                            <span
-                                className="
-                                    hidden
-                                    sm:block
-
-                                    h-1
-                                    w-1
-
-                                    rounded-full
-
-                                    bg-white/40
-                                "
+                            <LuCalendarDays
+                                size={17}
+                                className="text-[#B77F58]"
                             />
 
+                            <span>
+                                {singlePost.publishedAt
+                                    ? format(
+                                        new Date(
+                                            singlePost.publishedAt
+                                        ),
+                                        "dd MMMM yyyy"
+                                    )
+                                    : "No date"
+                                }
+                            </span>
 
-                            {/* Author */}
-
-                            <div
-                                className="
-                                    flex
-                                    items-center
-                                    gap-2
-                                "
-                            >
-
-                                <LuUser size={17} />
-
-                                <span>
-                                    {singlePost.author?.name ||
-                                        "CoreStack"}
-                                </span>
-
-                            </div>
+                        </div>
 
 
-                            {/* Divider */}
+                        {/* Divider */}
 
-                            <span
-                                className="
-                                    hidden
-                                    sm:block
+                        <span
+                            className="
+                                hidden
+                                sm:block
 
-                                    h-1
-                                    w-1
+                                h-1
+                                w-1
 
-                                    rounded-full
+                                rounded-full
 
-                                    bg-white/40
-                                "
+                                bg-[#C7C3C8]
+                            "
+                        />
+
+
+                        {/* Read Time */}
+
+                        <div
+                            className="
+                                flex
+                                items-center
+
+                                gap-2
+                            "
+                        >
+
+                            <LuClock3
+                                size={17}
+                                className="text-[#B77F58]"
                             />
 
-
-                            {/* Read Time */}
-
-                            <div
-                                className="
-                                    flex
-                                    items-center
-                                    gap-2
-                                "
-                            >
-
-                                <LuClock3
-                                    size={17}
-                                />
-
-                                <span>
-                                    {singlePost.readTime ||
-                                        "5 min read"}
-                                </span>
-
-                            </div>
+                            <span>
+                                {singlePost.readTime ||
+                                    "5 min read"
+                                }
+                            </span>
 
                         </div>
 
@@ -639,217 +649,495 @@ const SingleBlog = () => {
                 className="
                     w-full
 
-                    px-5
-                    md:px-12
-                    lg:px-20
+                    max-w-[1400px]
 
-                    py-16
-                    md:py-20
+                    mx-auto
+
+                    px-5
+                    md:px-10
+                    lg:px-16
+
+                    py-12
+                    md:py-16
+                    lg:py-20
                 "
             >
 
                 <div
                     className="
-                        max-w-4xl
+                        w-full
 
-                        mx-auto
+                        bg-white
+
+                        rounded-2xl
+
+                        border
+                        border-[#D6DCEB]/70
+
+                        shadow-sm
+
+                        overflow-hidden
                     "
                 >
 
-                    <article
+                    {/* Article Content Header */}
+
+                    <header
                         className="
-                            prose
-                            prose-lg
+                            px-6
+                            md:px-10
+                            lg:px-16
 
-                            max-w-none
-
-                            text-[#4B556F]
-
-                            prose-headings:text-[#03045E]
-
-                            prose-headings:font-bold
-
-                            prose-h2:text-3xl
-                            prose-h3:text-2xl
-
-                            prose-p:leading-8
-
-                            prose-a:text-[#B77F58]
-
-                            prose-strong:text-[#03045E]
-
-                            prose-blockquote:border-[#B77F58]
-
-                            prose-blockquote:text-[#4B556F]
-
-                            prose-img:rounded-2xl
-
-                            overflow-hidden
-
-                            break-words
-                        "
-                    >
-
-                        <PortableText
-                            value={singlePost.body}
-                            // components={
-                            //     portableTextComponents
-                            // }
-                        />
-
-                    </article>
-
-
-                    {/* =================================================
-                        AUTHOR / ARTICLE FOOTER
-                    ================================================== */}
-
-                    <div
-                        className="
-                            mt-16
                             pt-8
+                            md:pt-10
+                            lg:pt-12
 
-                            border-t
-                            border-[#D6DCEB]
+                            pb-6
                         "
                     >
+
+                        <div className="flex items-center gap-4">
+
+                            <span
+                                className="
+                                    h-px
+                                    w-10
+
+                                    bg-[#B77F58]
+                                "
+                            />
+
+                            <p
+                                className="
+                                    uppercase
+
+                                    text-[11px]
+                                    md:text-[12px]
+
+                                    tracking-[0.25em]
+
+                                    font-bold
+
+                                    text-[#B77F58]
+                                "
+                            >
+                                CoreStack Insights
+                            </p>
+
+                        </div>
+
 
                         <div
                             className="
-                                flex
-                                flex-col
-                                sm:flex-row
+                                mt-5
 
-                                sm:items-center
-                                sm:justify-between
+                                flex
+                                items-center
+                                justify-between
 
                                 gap-6
                             "
                         >
 
-                            {/* Author */}
-
-                            <div>
-
-                                <p
-                                    className="
-                                        text-xs
-                                        uppercase
-                                        tracking-[0.2em]
-
-                                        font-bold
-
-                                        text-[#B77F58]
-
-                                        mb-2
-                                    "
-                                >
-                                    Written by
-                                </p>
-
-                                <h3
-                                    className="
-                                        text-lg
-
-                                        font-semibold
-
-                                        text-[#03045E]
-                                    "
-                                >
-                                    {singlePost.author?.name ||
-                                        "CoreStack Solutions"}
-                                </h3>
-
-                                {singlePost.author?.bio && (
-
-                                    <p
-                                        className="
-                                            mt-1
-
-                                            max-w-xl
-
-                                            text-sm
-
-                                            leading-6
-
-                                            text-[#6B7280]
-                                        "
-                                    >
-                                        {singlePost.author.bio}
-                                    </p>
-
-                                )}
-
-                            </div>
-
-
-                            {/* Back to Blog */}
-
-                            <Link
-                                to="/leadership-thoughts"
+                            <h2
                                 className="
-                                    group
+                                    text-xl
+                                    md:text-2xl
 
-                                    inline-flex
-                                    items-center
-                                    justify-center
-
-                                    gap-2
-
-                                    shrink-0
-
-                                    rounded-full
-
-                                    border
-                                    border-[#D6DCEB]
-
-                                    px-6
-                                    py-3
-
-                                    text-sm
-                                    font-semibold
+                                    font-bold
 
                                     text-[#03045E]
-
-                                    transition-all
-                                    duration-300
-
-                                    hover:-translate-y-1
-
-                                    hover:bg-[#03045E]
-
-                                    hover:text-white
-
-                                    hover:border-[#03045E]
                                 "
                             >
+                                From the Insight Desk
+                            </h2>
 
-                                Back to Insights
+                            <span
+                                className="
+                                    hidden
+                                    md:block
 
-                                <LuArrowUpRight
-                                    size={17}
-                                    className="
-                                        transition-transform
-                                        duration-300
+                                    h-px
+                                    flex-1
 
-                                        group-hover:translate-x-1
-                                        group-hover:-translate-y-1
-                                    "
-                                />
-
-                            </Link>
+                                    bg-[#D6DCEB]
+                                "
+                            />
 
                         </div>
 
+                    </header>
+
+
+                    {/* Divider */}
+
+                    <div
+                        className="
+                            mx-6
+                            md:mx-10
+                            lg:mx-16
+
+                            border-t
+                            border-[#D6DCEB]/70
+                        "
+                    />
+
+
+                    {/* Article Body */}
+
+                    <div
+                        className="
+                            px-6
+                            md:px-10
+                            lg:px-16
+
+                            py-10
+                            md:py-14
+                            lg:py-16
+                        "
+                    >
+
+                        <article
+                            className="
+                                max-w-4xl
+
+                                mx-auto
+
+                                min-w-0
+                            "
+                        >
+
+                            <PortableText
+                                value={singlePost.body}
+                                components={portableTextComponents}
+                            />
+
+                        </article>
+
                     </div>
+
+
+                    {/* Bottom Accent */}
+
+                    <div
+                        className="
+                            h-1
+
+                            w-full
+
+                            bg-gradient-to-r
+                            from-[#03045E]
+                            via-[#B77F58]
+                            to-[#03045E]
+                        "
+                    />
 
                 </div>
 
             </section>
 
-        </main>
 
+{/* =================================================
+    AUTHOR PROFILE
+================================================== */}
+
+<section
+    className="
+        w-full
+
+        max-w-[1400px]
+
+        mx-auto
+
+        px-5
+        md:px-10
+        lg:px-16
+
+        pb-20
+        md:pb-28
+    "
+>
+
+    <div
+        className="
+            max-w-5xl
+
+            mx-auto
+
+            border-t
+            border-[#D6DCEB]
+
+            pt-10
+            md:pt-14
+        "
+    >
+
+        {/* Section Label */}
+
+        <div
+            className="
+                flex
+                items-center
+                gap-4
+
+                mb-8
+            "
+        >
+
+            <span
+                className="
+                    h-px
+                    w-10
+
+                    bg-[#B77F58]
+                "
+            />
+
+            <p
+                className="
+                    uppercase
+
+                    text-[11px]
+                    md:text-xs
+
+                    tracking-[0.25em]
+
+                    font-bold
+
+                    text-[#B77F58]
+                "
+            >
+                About the Author
+            </p>
+
+        </div>
+
+
+        {/* Author Card */}
+
+        <div
+            className="
+                relative
+
+                overflow-hidden
+
+                rounded-2xl
+
+                border
+                border-[#D6DCEB]/80
+
+                bg-white
+
+                p-6
+                md:p-8
+                lg:p-10
+
+                shadow-sm
+            "
+        >
+
+            {/* Decorative Accent */}
+
+            <div
+                className="
+                    absolute
+                    top-0
+                    left-0
+
+                    h-1
+                    w-full
+
+                    bg-gradient-to-r
+                    from-[#03045E]
+                    via-[#B77F58]
+                    to-[#03045E]
+                "
+            />
+
+
+            <div
+                className="
+                    flex
+                    flex-col
+                    md:flex-row
+
+                    gap-7
+                    md:gap-10
+
+                    items-start
+                "
+            >
+
+                {/* =================================================
+                    AUTHOR IMAGE
+                ================================================== */}
+
+                <div
+                    className="
+                        relative
+
+                        w-24
+                        h-24
+                        md:w-28
+                        md:h-28
+
+                        shrink-0
+
+                        rounded-full
+
+                        overflow-hidden
+
+                        bg-[#E9EDF5]
+
+                        border
+                        border-[#D6DCEB]
+
+                        ring-4
+                        ring-[#F8FAFC]
+                    "
+                >
+
+                    {singlePost.author?.image?.asset?.url ? (
+
+                        <img
+                            src={
+                                singlePost.author.image.asset.url
+                            }
+
+                            alt={
+                                singlePost.author.name ||
+                                "Article author"
+                            }
+
+                            className="
+                                w-full
+                                h-full
+
+                                object-cover
+                            "
+                        />
+
+                    ) : (
+
+                        <div
+                            className="
+                                w-full
+                                h-full
+
+                                flex
+                                items-center
+                                justify-center
+
+                                bg-[#03045E]
+
+                                text-white
+
+                                text-2xl
+                                font-bold
+                            "
+                        >
+                            {singlePost.author?.name
+                                ?.charAt(0)
+                                ?.toUpperCase() || "C"
+                            }
+                        </div>
+
+                    )}
+
+                </div>
+
+
+                {/* =================================================
+                    AUTHOR INFORMATION
+                ================================================== */}
+
+                <div
+                    className="
+                        min-w-0
+
+                        flex-1
+                    "
+                >
+
+                    {/* Author Name */}
+
+                    <h3
+                        className="
+                            text-2xl
+                            md:text-3xl
+
+                            font-bold
+
+                            text-[#03045E]
+
+                            leading-tight
+
+                            mb-2
+                        "
+                    >
+                        {singlePost.author?.name ||
+                            "CoreStack"
+                        }
+                    </h3>
+
+
+                    {/* Author Role */}
+
+                    <p
+                        className="
+                            text-sm
+
+                            font-semibold
+
+                            tracking-wide
+
+                            text-[#B77F58]
+
+                            mb-5
+                        "
+                    >
+                        CoreStack Solutions
+                    </p>
+
+
+                    {/* Author Bio */}
+
+                    {singlePost.author?.bio?.length > 0 && (
+
+                        <div
+                            className="
+                                max-w-2xl
+
+                                text-[#4B556F]
+
+                                leading-7
+
+                                [&>p]:mb-3
+                                [&>p:last-child]:mb-0
+                            "
+                        >
+
+                            <PortableText
+                                value={singlePost.author.bio}
+                            />
+
+                        </div>
+
+                    )}
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+        </main>
     );
 };
+
 
 export default SingleBlog;

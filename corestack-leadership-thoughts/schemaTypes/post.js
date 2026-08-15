@@ -38,7 +38,7 @@ export default defineType({
             name: "excerpt",
             title: "Excerpt",
             type: "text",
-            rows: 4,
+            rows: 8,
             description:
                 "A short summary of the article used on blog cards and previews.",
             validation: (Rule) =>
