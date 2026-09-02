@@ -624,7 +624,7 @@ const HomeHero = () => {
     </a>
 
     <a
-        href="https://daa-website.com"
+        href="https://digital-arts-mwi.vercel.app"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Visit DAA"
